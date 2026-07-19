@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SgCVhub — Brands & Pricing</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;800;900&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --primary:#0F3741; --primary-d:#091f26; --primary-l:#1a4f5e;
+  --accent:#39BA2E; --accent-text:#2F9E26; --accent-muted:#6CAB64; --accent-pale:rgba(57,186,46,.08);
+  --bg:#FFFFFF; --mist:#F1F6F3; --card:#F4F9F6; --border:#E0ECE6; --border-hover:#C7DBD2;
+  --text:#3A4E52; --muted:#7D8C8A; --on-dark:#A9C2C4;
+  --danger:#C4442E; --danger-pale:rgba(196,68,46,.08); --danger-text:#B03D28;
+  --amber:#B8860B; --amber-pale:rgba(184,134,11,.10);
+  --font-head:'Outfit',sans-serif; --font-body:'Work Sans',sans-serif;
+  --r-sm:6px;--r-md:8px;--r-lg:14px;--r-xl:20px;--r-2xl:28px;--r-pill:999px;
+  --sh1:0 1px 3px rgba(15,55,65,.06);--sh2:0 4px 12px rgba(15,55,65,.09);--sh3:0 10px 30px rgba(15,55,65,.13);
+}
+*{box-sizing:border-box;}
+body{font-family:var(--font-body);background:var(--bg);color:var(--text);margin:0;line-height:1.6;}
+.wrap{max-width:1180px;margin:0 auto;padding:56px 24px;}
+
+.page-eyebrow{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--accent-muted);margin-bottom:10px;}
+.page-h1{font-family:var(--font-head);font-size:clamp(30px,4vw,42px);font-weight:900;color:var(--primary);margin:0 0 12px;}
+.page-sub{font-size:15.5px;color:var(--muted);max-width:640px;line-height:1.65;margin-bottom:8px;}
+
+.brand-section{margin-top:64px;}
+.brand-hdr{display:flex;align-items:baseline;gap:14px;margin-bottom:6px;flex-wrap:wrap;}
+.brand-name{font-family:var(--font-head);font-size:26px;font-weight:900;color:var(--primary);}
+.brand-tag{font-size:12.5px;color:var(--muted);font-weight:500;}
+.promo-flag{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:700;color:var(--amber);background:var(--amber-pale);border:1px solid rgba(184,134,11,.25);padding:4px 11px;border-radius:var(--r-pill);margin-bottom:26px;}
+
+/* model cards */
+.model-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px;margin-bottom:14px;}
+.mcard{border:1px solid var(--border);border-radius:var(--r-xl);background:var(--bg);box-shadow:var(--sh1);overflow:hidden;transition:box-shadow 160ms,transform 160ms;}
+.mcard:hover{box-shadow:var(--sh3);transform:translateY(-2px);}
+.mcard-head{background:var(--primary);padding:16px 18px;}
+.mcard-name{font-family:var(--font-head);font-weight:800;font-size:16.5px;color:#fff;}
+.mcard-type{font-size:11.5px;color:var(--on-dark);margin-top:2px;}
+.mcard-body{padding:16px 18px 18px;}
+
+.price-row{display:flex;align-items:baseline;gap:10px;margin-bottom:4px;flex-wrap:wrap;}
+.price-before{font-size:13px;color:var(--muted);text-decoration:line-through;}
+.price-after{font-family:var(--font-head);font-weight:900;font-size:22px;color:var(--accent-text);}
+.price-nopromo{font-family:var(--font-head);font-weight:900;font-size:22px;color:var(--primary);}
+.price-note{font-size:11px;color:var(--muted);margin-bottom:14px;}
+
+.rebate-pill{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:700;color:var(--accent-text);background:var(--accent-pale);border:1px solid rgba(57,186,46,.22);padding:3px 10px;border-radius:var(--r-pill);margin-bottom:12px;}
+
+.spec-list{list-style:none;padding:0;margin:0 0 14px;font-size:12.5px;color:var(--text);}
+.spec-list li{display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid var(--border);}
+.spec-list li:last-child{border-bottom:none;}
+.spec-list .k{color:var(--muted);}
+.spec-list .v{font-weight:600;color:var(--primary);}
+
+.mcard-foot{display:flex;gap:8px;margin-top:4px;}
+.btn-outline{flex:1;text-align:center;border:1.5px solid var(--primary);color:var(--primary);background:transparent;padding:9px 10px;border-radius:var(--r-md);font-family:var(--font-body);font-weight:600;font-size:12.5px;text-decoration:none;}
+.btn-solid{flex:1;text-align:center;border:1.5px solid var(--accent);color:#08251C;background:var(--accent);padding:9px 10px;border-radius:var(--r-md);font-family:var(--font-body);font-weight:700;font-size:12.5px;text-decoration:none;}
+
+/* Canter range table */
+.range-table-wrap{border:1px solid var(--border);border-radius:var(--r-xl);overflow:hidden;box-shadow:var(--sh1);margin-top:6px;}
+.range-table{width:100%;border-collapse:collapse;}
+.range-table th{background:var(--primary);color:#fff;font-family:var(--font-head);font-weight:700;font-size:12.5px;padding:12px 16px;text-align:left;}
+.range-table td{padding:11px 16px;font-size:13px;border-bottom:1px solid var(--border);color:var(--text);}
+.range-table tr:last-child td{border-bottom:none;}
+.range-table tr:nth-child(even) td{background:var(--mist);}
+.range-table td:first-child{font-weight:700;color:var(--primary);}
+.range-cta{padding:16px 18px;background:var(--card);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+.range-cta span{font-size:12.5px;color:var(--muted);}
+
+.disclaimer{font-size:11.5px;color:var(--muted);margin-top:14px;line-height:1.6;max-width:760px;}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <p class="page-eyebrow">SgCVhub — Brands & Pricing</p>
+  <h1 class="page-h1">Explore our range</h1>
+  <p class="page-sub">All prices shown include registration fee, road tax, and GST unless stated. COE is quoted separately and varies monthly. Rebates (CVES / HVZES) are assessed by LTA at registration — figures below are indicative.</p>
+
+  <!-- ============ OPEL ============ -->
+  <section class="brand-section">
+    <div class="brand-hdr">
+      <div class="brand-name">Opel</div>
+      <div class="brand-tag">Electric vans — Combo-e, Vivaro-e</div>
+    </div>
+
+    <div class="model-grid">
+      <div class="mcard">
+        <div class="mcard-head"><div class="mcard-name">Combo-e</div><div class="mcard-type">Compact electric van</div></div>
+        <div class="mcard-body">
+          <span class="rebate-pill">✓ CVES Band A</span>
+          <div class="price-row"><span class="price-nopromo">$49,800</span></div>
+          <div class="price-note">Before COE · after $15,000 CVES rebate</div>
+          <ul class="spec-list">
+            <li><span class="k">Range (WLTP)</span><span class="v">350 km</span></li>
+            <li><span class="k">Cargo volume</span><span class="v">3.8 m³</span></li>
+            <li><span class="k">Battery warranty</span><span class="v">8 yrs / 160,000 km</span></li>
+            <li><span class="k">Servicing</span><span class="v">3x, 20,000 km/6 mo</span></li>
+            <li><span class="k">Stock</span><span class="v">Aug/Sept 2026</span></li>
+          </ul>
+          <div class="mcard-foot"><a href="/brands/opel/combo-e" class="btn-outline">Full specs</a><a href="/contact" class="btn-solid">Enquire</a></div>
+        </div>
+      </div>
+
+      <div class="mcard">
+        <div class="mcard-head"><div class="mcard-name">Vivaro-e</div><div class="mcard-type">Mid-size electric van</div></div>
+        <div class="mcard-body">
+          <span class="rebate-pill">✓ CVES Band A</span>
+          <div class="price-row"><span class="price-nopromo">$63,800</span></div>
+          <div class="price-note">Before COE · after $15,000 CVES rebate</div>
+          <ul class="spec-list">
+            <li><span class="k">Range (WLTP)</span><span class="v">370 km</span></li>
+            <li><span class="k">Cargo volume</span><span class="v">5.8 m³</span></li>
+            <li><span class="k">Unladen weight</span><span class="v">1,800 kg</span></li>
+            <li><span class="k">Battery warranty</span><span class="v">8 yrs / 160,000 km</span></li>
+            <li><span class="k">Stock</span><span class="v">Ex-stock</span></li>
+          </ul>
+          <div class="mcard-foot"><a href="/brands/opel/vivaro-e" class="btn-outline">Full specs</a><a href="/contact" class="btn-solid">Enquire</a></div>
+        </div>
+      </div>
+
+      <div class="mcard">
+        <div class="mcard-head"><div class="mcard-name">Vivaro-e Commuter</div><div class="mcard-type">8-seater passenger/goods van</div></div>
+        <div class="mcard-body">
+          <span class="rebate-pill">✓ CVES Band A</span>
+          <div class="price-row"><span class="price-nopromo">$75,800</span></div>
+          <div class="price-note">Before COE · after $15,000 CVES rebate</div>
+          <ul class="spec-list">
+            <li><span class="k">Range (WLTP)</span><span class="v">370 km</span></li>
+            <li><span class="k">Seating</span><span class="v">8 pax (rear)</span></li>
+            <li><span class="k">Battery warranty</span><span class="v">8 yrs / 160,000 km</span></li>
+            <li><span class="k">Stock</span><span class="v">Ex-stock</span></li>
+          </ul>
+          <div class="mcard-foot"><a href="/brands/opel/vivaro-e-commuter" class="btn-outline">Full specs</a><a href="/contact" class="btn-solid">Enquire</a></div>
+        </div>
+      </div>
+    </div>
+    <p class="disclaimer">Opel pricing based on financing with GB Helios (90% loan, 7 years, subject to approval). Excludes optional accessories. Chassis warranty 3 yrs/100,000 km.</p>
+  </section>
+
+  <!-- ============ FOTON ============ -->
+  <section class="brand-section">
+    <div class="brand-hdr">
+      <div class="brand-name">Foton</div>
+      <div class="brand-tag">Vans & trucks — diesel and electric</div>
+    </div>
+    <div class="promo-flag">🎉 2026 National Day Promotion — valid 6 Jul to 31 Aug 2026, limited units</div>
+
+    <div class="model-grid">
+      <div class="mcard">
+        <div class="mcard-head"><div class="mcard-name">eView Connect (L1H1)</div><div class="mcard-type">Standard electric van</div></div>
+        <div class="mcard-body">
+          <span class="rebate-pill">✓ CVES Band A</span>
+          <div class="price-row"><span class="price-before">$56,500</span><span class="price-after">$41,500</span></div>
+          <div class="price-note">After $15,000 CVES rebate · promo price</div>
+          <ul class="spec-list">
+            <li><span class="k">Battery warranty</span><span class="v">10 yrs / 400,000 km</span></li>
+            <li><span class="k">Drive motor warranty</span><span class="v">5 yrs / 200,000 km</span></li>
+            <li><span class="k">Promo extras</span><span class="v">+4 servicing, 22kW charger*</span></li>
+          </ul>
+          <div class="mcard-foot"><a href="/brands/foton/eview-connect" class="btn-outline">Full specs</a><a href="/contact" class="btn-solid">Enquire</a></div>
+        </div>
+      </div>
+
+      <div class="mcard">
+        <div class="mcard-head"><div class="mcard-name">eView Connect (L2H1)</div><div class="mcard-type">Long-body electric van</div></div>
+        <div class="mcard-body">
+          <span class="rebate-pill">✓ CVES Band A</span>
+          <div class="price-row"><span class="price-before">$57,500</span><span class="price-after">$42,500</span></div>
+          <div class="price-note">After $15,000 CVES rebate · promo price</div>
+          <ul class="spec-list">
+            <li><span class="k">Battery warranty</span><span class="v">10 yrs / 400,000 km</span></li>
+            <li><span class="k">Drive motor warranty</span><span class="v">5 yrs / 200,000 km</span></li>
+            <li><span class="k">Promo extras</span><span class="v">+4 servicing, 22kW charger*</span></li>
+          </ul>
+          <div class="mcard-foot"><a href="/brands/foton/eview-connect" class="btn-outline">Full specs</a><a href="/contact" class="btn-solid">Enquire</a></div>
+        </div>
+      </div>
+
+      <div class="mcard">
+        <div class="mcard-head"><div class="mcard-name">eMiler (11ft)</div><div class="mcard-type">Electric flatbed truck</div></div>
+        <div class="mcard-body">
+          <span class="rebate-pill">✓ HVZES eligible</span>
+          <div class="price-row"><span class="price-before">$72,800</span><span class="price-after">$32,800</span></div>
+          <div class="price-note">After $40,000 HVZES incentive (staged over 3 yrs) · promo price</div>
+          <ul class="spec-list">
+            <li><span class="k">Range</span><span class="v">375 km</span></li>
+            <li><span class="k">Payload</span><span class="v">2,620 kg</span></li>
+            <li><span class="k">Battery warranty</span><span class="v">10 yrs / 400,000 km</span></li>
+          </ul>
+          <div class="mcard-foot"><a href="/brands/foton/emiler" class="btn-outline">Full specs</a><a href="/contact" class="btn-solid">Enquire</a></div>
+        </div>
+      </div>
+
+      <div class="mcard">
+        <div class="mcard-head"><div class="mcard-name">eAumark</div><div class="mcard-type">Electric box truck</div></div>
+        <div class="mcard-body">
+          <span class="rebate-pill">✓ HVZES eligible</span>
+          <div class="price-row"><span class="price-before">$85,800</span><span class="price-after">$45,800</span></div>
+          <div class="price-note">After $40,000 HVZES incentive (staged over 3 yrs) · promo price</div>
+          <ul class="spec-list">
+            <li><span class="k">Battery warranty</span><span class="v">8 yrs / 400,000 km</span></li>
+            <li><span class="k">Wooden body</span><span class="v">+$4,500 (optional)</span></li>
+          </ul>
+          <div class="mcard-foot"><a href="/brands/foton/eaumark" class="btn-outline">Full specs</a><a href="/contact" class="btn-solid">Enquire</a></div>
+        </div>
+      </div>
+
+      <div class="mcard">
+        <div class="mcard-head"><div class="mcard-name">eAuman D (18 Ton)</div><div class="mcard-type">Heavy electric truck, 25ft wooden body</div></div>
+        <div class="mcard-body">
+          <span class="rebate-pill">✓ HVZES eligible</span>
+          <div class="price-row"><span class="price-before">$197,000</span><span class="price-after">$157,000</span></div>
+          <div class="price-note">After $40,000 HVZES incentive (staged over 3 yrs)</div>
+          <ul class="spec-list">
+            <li><span class="k">Drive motor warranty</span><span class="v">5 yrs / 200,000 km</span></li>
+            <li><span class="k">Chassis warranty</span><span class="v">2 yrs, unlimited mileage</span></li>
+          </ul>
+          <div class="mcard-foot"><a href="/brands/foton/eauman-d" class="btn-outline">Full specs</a><a href="/contact" class="btn-solid">Enquire</a></div>
+        </div>
+      </div>
+
+      <div class="mcard">
+        <div class="mcard-head"><div class="mcard-name">Auman D (16 Ton)</div><div class="mcard-type">Diesel truck, 25ft wooden body</div></div>
+        <div class="mcard-body">
+          <div class="price-row"><span class="price-nopromo">$83,500</span></div>
+          <div class="price-note">Before COE · promo price (incl. body)</div>
+          <ul class="spec-list">
+            <li><span class="k">Cab &amp; chassis only</span><span class="v">$78,500</span></li>
+            <li><span class="k">Warranty</span><span class="v">2 yrs, unlimited mileage</span></li>
+          </ul>
+          <div class="mcard-foot"><a href="/brands/foton/auman-d" class="btn-outline">Full specs</a><a href="/contact" class="btn-solid">Enquire</a></div>
+        </div>
+      </div>
+
+      <div class="mcard">
+        <div class="mcard-head"><div class="mcard-name">Auman D (19 Ton)</div><div class="mcard-type">Diesel truck, 25ft wooden body</div></div>
+        <div class="mcard-body">
+          <div class="price-row"><span class="price-nopromo">$93,500</span></div>
+          <div class="price-note">Before COE · promo price (incl. body)</div>
+          <ul class="spec-list">
+            <li><span class="k">Cab &amp; chassis only</span><span class="v">$88,500</span></li>
+            <li><span class="k">Warranty</span><span class="v">2 yrs, unlimited mileage</span></li>
+          </ul>
+          <div class="mcard-foot"><a href="/brands/foton/auman-d" class="btn-outline">Full specs</a><a href="/contact" class="btn-solid">Enquire</a></div>
+        </div>
+      </div>
+    </div>
+    <p class="disclaimer">*Promo pricing valid for orders placed 6 Jul – 31 Aug 2026 only, limited to 30 units per model (5 units for eAuman D); not combinable with the S$400/unit pairing incentive. Prices shown include GST.</p>
+  </section>
+
+  <!-- ============ FUSO ============ -->
+  <section class="brand-section">
+    <div class="brand-hdr">
+      <div class="brand-name">Mitsubishi Fuso</div>
+      <div class="brand-tag">Canter — diesel trucks, 10ft to 18ft</div>
+    </div>
+
+    <div class="range-table-wrap">
+      <table class="range-table">
+        <thead>
+          <tr><th>Length / GVW</th><th>Configuration</th><th>Price (from)</th><th>Warranty</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>10 ft</td><td>5.0T, CBU</td><td>$52,500 – $53,500</td><td rowspan="7" style="vertical-align:middle;">5 yrs / 200,000 km</td></tr>
+          <tr><td>12 ft</td><td>5.0T, Cab Chassis / Wooden Body</td><td>$54,000 – $59,000</td></tr>
+          <tr><td>14 ft</td><td>5.0T, Cab Chassis / CBU / Wooden Body</td><td>$55,500 – $59,000</td></tr>
+          <tr><td>14 ft</td><td>6.7T, Cab Chassis / CBU / Wooden Body</td><td>$62,500 – $68,000</td></tr>
+          <tr><td>16 ft</td><td>7.5T, Cab Chassis / CBU / Wooden Body</td><td>$64,500 – $69,500</td></tr>
+          <tr><td>18 ft</td><td>8.55T, 2 SWB, Cab Chassis / Wooden Body</td><td>$74,000 – $79,000</td></tr>
+        </tbody>
+      </table>
+      <div class="range-cta">
+        <span>12 configurations available · pricing before COE · 12x servicing included</span>
+        <a href="/brands/fuso/canter" class="btn-solid" style="flex:none;padding:9px 20px;">See full price list</a>
+      </div>
+    </div>
+    <p class="disclaimer">Canter is a Y-plate Heavy Goods Vehicle — outside CVES scope, so no emissions surcharge applies. Stock varies by configuration; several configs currently ex-stock or limited units.</p>
+  </section>
+
+</div>
+</body>
+</html>

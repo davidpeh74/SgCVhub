@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><title>Foton — SgCVhub</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;800;900&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--primary:#0F3741;--accent:#39BA2E;--accent-text:#2F9E26;--accent-pale:rgba(57,186,46,.08);--bg:#FFFFFF;--mist:#F1F6F3;--border:#E0ECE6;--text:#3A4E52;--muted:#7D8C8A;--on-dark:#A9C2C4;--amber:#B8860B;--amber-pale:rgba(184,134,11,.10);--font-head:'Outfit',sans-serif;--font-body:'Work Sans',sans-serif;--r-md:8px;--r-lg:14px;--r-xl:20px;--r-pill:999px;--sh1:0 1px 3px rgba(15,55,65,.06);--sh3:0 10px 30px rgba(15,55,65,.13);}
+*{box-sizing:border-box;}body{font-family:var(--font-body);background:var(--bg);color:var(--text);margin:0;line-height:1.6;}
+.wrap{max-width:1180px;margin:0 auto;padding:56px 24px;}
+.crumb{font-size:12.5px;color:var(--muted);margin-bottom:18px;}.crumb a{color:var(--muted);text-decoration:none;}
+.page-h1{font-family:var(--font-head);font-size:clamp(30px,4vw,42px);font-weight:900;color:var(--primary);margin:0 0 8px;}
+.page-sub{font-size:19px;color:var(--muted);max-width:720px;line-height:1.7;margin-bottom:40px;}
+.group-label{font-family:var(--font-head);font-size:16px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;color:var(--muted);margin:44px 0 18px;padding-bottom:8px;border-bottom:1px solid var(--border);}
+.model-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px;}
+.mcard{border:1px solid var(--border);border-radius:var(--r-xl);background:var(--bg);box-shadow:var(--sh1);overflow:hidden;text-decoration:none;display:block;transition:box-shadow 160ms,transform 160ms,border-color 160ms;}
+.mcard:hover{box-shadow:var(--sh3);transform:translateY(-2px);border-color:var(--border);}
+.mcard.ev .mcard-head{background:linear-gradient(135deg,var(--primary),#123f4a);}
+.mcard-head{background:var(--primary);padding:16px 18px;}
+.mcard-name{font-family:var(--font-head);font-weight:800;font-size:21px;color:#fff;line-height:1.35;}
+.mcard-type{font-size:15px;color:var(--on-dark);margin-top:4px;}
+.mcard-body{padding:14px 18px 18px;}
+.price-before{font-size:15px;color:var(--muted);text-decoration:line-through;}
+.price-tag-row{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin-bottom:6px;}
+.rebate-note{font-size:15px;color:var(--muted);font-weight:600;}
+.pill-row{margin-bottom:10px;}
+.price-tag{font-family:var(--font-head);font-weight:900;font-size:26px;color:var(--primary);}
+.mcard.ev .price-tag{color:var(--accent-text);}
+.promo-pill{display:inline-flex;align-items:center;gap:5px;font-size:13px;font-weight:700;color:var(--amber);background:var(--amber-pale);border:1px solid rgba(184,134,11,.3);padding:5px 12px;border-radius:var(--r-md);line-height:1.45;max-width:260px;}
+.no-promo-pill{display:inline-flex;font-size:13px;font-weight:700;color:var(--primary);background:var(--mist);border:1px solid var(--border);padding:4px 11px;border-radius:var(--r-pill);white-space:nowrap;}
+.price-note{font-size:13px;color:var(--muted);margin-bottom:12px;line-height:1.6;}
+.topup-list{list-style:none;padding:0;margin:0 0 14px;font-size:14.5px;color:var(--muted);}
+.topup-list li{padding:3px 0;}
+.topup-list li::before{content:"+ ";color:var(--accent-muted,#6CAB64);font-weight:700;}
+.rebate-pill{display:inline-flex;align-items:center;gap:5px;font-size:13.5px;font-weight:700;color:var(--accent-text);background:var(--accent-pale);border:1px solid rgba(57,186,46,.22);padding:4px 12px;border-radius:var(--r-pill);}
+.disclaimer{font-size:14.5px;color:var(--muted);margin-top:36px;line-height:1.7;max-width:860px;}
+</style></head><body>
+<div class="wrap">
+  <p class="crumb"><a href="/brands">Brands</a> / Foton</p>
+  <h1 class="page-h1">Foton</h1>
+  <p class="page-sub">Vans and trucks, diesel or fully electric. Four EV models eligible for CVES or HVZES rebates, plus the diesel Auman D heavy truck range.</p>
+
+  <div class="group-label">⚡ Electric</div>
+  <div class="model-grid">
+    <a href="/brands/foton/eview-connect" class="mcard ev">
+      <div class="mcard-head"><div class="mcard-name">eView Connect</div><div class="mcard-type">Electric van, 2 lengths — 4.9m &amp; 5.2m</div></div>
+      <div class="mcard-body">
+        <div class="price-before">$41,500</div>
+        <div class="price-tag-row"><span class="price-tag">From $40,500</span><span class="rebate-note">after $15,000 CVES rebate</span></div>
+        <div class="pill-row"><span class="promo-pill">National Day promo till 31st Aug - limited to 30 units</span></div>
+        <ul class="topup-list"><li>Autel 22kW AC charger at $1,000 (optional)</li></ul>
+        <span class="rebate-pill">✓ CVES Band A</span>
+      </div>
+    </a>
+
+    <a href="/brands/foton/emiler" class="mcard ev">
+      <div class="mcard-head"><div class="mcard-name">eMiler CBU</div><div class="mcard-type">11ft electric flatbed truck</div></div>
+      <div class="mcard-body">
+        <div class="price-before">$32,800</div>
+        <div class="price-tag-row"><span class="price-tag">$30,800</span><span class="rebate-note">after $40,000 HVZES rebate</span></div>
+        <div class="pill-row"><span class="promo-pill">National Day promo till 31st Aug - limited to 30 units</span></div>
+        <ul class="topup-list">
+          <li>Autel 22kW AC charger at $1,000 (optional)</li>
+          <li>Chequered plate (base only) at $1,000 (optional)</li>
+        </ul>
+        <span class="rebate-pill">✓ HVZES eligible</span>
+      </div>
+    </a>
+
+    <a href="/brands/foton/eaumark" class="mcard ev">
+      <div class="mcard-head"><div class="mcard-name">eAumark — cab & chassis</div><div class="mcard-type">Electric box truck</div></div>
+      <div class="mcard-body">
+        <div class="price-before">$45,800</div>
+        <div class="price-tag-row"><span class="price-tag">$43,800</span><span class="rebate-note">after $40,000 HVZES rebate</span></div>
+        <div class="pill-row"><span class="promo-pill">National Day promo till 31st Aug - limited to 30 units</span></div>
+        <ul class="topup-list">
+          <li>Autel 22kW AC charger at $1,000 (optional)</li>
+          <li>Chequered plate (base only) at $1,000 (optional)</li>
+          <li>Wooden deck at $4,500 (optional)</li>
+        </ul>
+        <span class="rebate-pill">✓ HVZES eligible</span>
+      </div>
+    </a>
+
+    <a href="/brands/foton/auman-d" class="mcard ev">
+      <div class="mcard-head"><div class="mcard-name">eAuman D — cab & chassis</div><div class="mcard-type">Heavy electric truck, 18 Ton</div></div>
+      <div class="mcard-body">
+        <div class="price-tag-row"><span class="price-tag">$152,000</span><span class="rebate-note">after $40,000 HVZES rebate</span></div>
+        <div class="pill-row"><span class="promo-pill">National Day promo till 31st Aug - limited to 5 units</span></div>
+        <ul class="topup-list"><li>Wooden deck at $5,000 (optional)</li></ul>
+        <span class="rebate-pill">✓ HVZES eligible</span>
+      </div>
+    </a>
+  </div>
+
+  <div class="group-label">⛽ Diesel</div>
+  <div class="model-grid">
+    <a href="/brands/foton/auman-d" class="mcard">
+      <div class="mcard-head"><div class="mcard-name">Auman D 16T — cab & chassis</div><div class="mcard-type">Wooden deck optional</div></div>
+      <div class="mcard-body">
+        <div class="price-tag-row"><span class="price-tag">From $78,500</span><span class="rebate-note">cab &amp; chassis, before COE</span></div>
+        <div class="pill-row"><span class="promo-pill">National Day promo till 31st Aug - limited to 30 units</span></div>
+        <ul class="topup-list"><li>Wooden deck at $5,000 (optional)</li></ul>
+      </div>
+    </a>
+    <a href="/brands/foton/auman-d" class="mcard">
+      <div class="mcard-head"><div class="mcard-name">Auman D 19T — cab & chassis</div><div class="mcard-type">Wooden deck optional</div></div>
+      <div class="mcard-body">
+        <div class="price-tag-row"><span class="price-tag">From $88,500</span><span class="rebate-note">cab &amp; chassis, before COE</span></div>
+        <div class="pill-row"><span class="promo-pill">National Day promo till 31st Aug - limited to 30 units</span></div>
+        <ul class="topup-list"><li>Wooden deck at $5,000 (optional)</li></ul>
+      </div>
+    </a>
+  </div>
+
+  <p class="disclaimer">Prices before COE, include GST. All models above are part of the National Day promotion, valid for orders 6 Jul – 31 Aug 2026, subject to stated unit limits per model.</p>
+</div>
+</body></html>
