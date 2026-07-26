@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Use | SgCVhub — Singapore's Commercial Vehicle Hub</title>
+<meta name="description" content="Terms and conditions governing your use of the SgCVhub website and services.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --primary:#0F3741; --primary-d:#091f26; --primary-l:#1a4f5e;
+  --accent:#39BA2E; --accent-text:#2F9E26; --accent-muted:#6CAB64; --accent-pale:rgba(57,186,46,.08);
+  --bg:#FFFFFF; --mist:#F1F6F3; --card:#F4F9F6; --border:#E0ECE6; --border-hover:#C7DBD2;
+  --text:#3A4E52; --muted:#7D8C8A; --on-dark:#A9C2C4; --btn-label:#08251C;
+  --wa:#25D366; --wa-d:#1da851;
+  --font-head:'Outfit',sans-serif; --font-body:'Work Sans',sans-serif;
+  --r-sm:6px;--r-md:8px;--r-lg:14px;--r-xl:20px;--r-2xl:28px;--r-pill:999px;
+  --sh1:0 1px 3px rgba(15,55,65,.06);--sh2:0 4px 12px rgba(15,55,65,.09);
+  --sh3:0 10px 30px rgba(15,55,65,.13);
+  --sh-wa:0 6px 20px rgba(37,211,102,.40);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--font-body);background:var(--bg);color:var(--text);line-height:1.7;}
+
+/* ── STICKY WHATSAPP ── */
+.wa-fab{position:fixed;bottom:28px;right:24px;z-index:500;}
+.wa-btn{width:56px;height:56px;background:var(--wa);border-radius:var(--r-pill);display:flex;align-items:center;justify-content:center;box-shadow:var(--sh-wa);cursor:pointer;text-decoration:none;transition:transform 160ms,filter 160ms;}
+.wa-btn:hover{transform:scale(1.08);filter:brightness(1.05);}
+.wa-btn svg{width:28px;height:28px;fill:#fff;}
+
+/* ── NAV ── */
+nav{background:var(--primary);position:sticky;top:0;z-index:200;box-shadow:0 2px 16px rgba(15,55,65,.22);}
+.nav-inner{max-width:1140px;margin:0 auto;padding:0 24px;display:flex;align-items:center;height:68px;gap:4px;}
+.logo{font-family:var(--font-head);font-size:22px;font-weight:900;color:#fff;text-decoration:none;letter-spacing:-.6px;margin-right:auto;display:flex;align-items:center;gap:2px;}
+.logo span{color:var(--accent);}
+.nav-links{display:flex;align-items:center;gap:2px;list-style:none;}
+.nav-links a{font-size:14.5px;font-weight:500;color:var(--on-dark);text-decoration:none;padding:6px 11px;border-radius:var(--r-md);transition:color 120ms,background 120ms;}
+.nav-links a:hover{color:#fff;background:rgba(255,255,255,.08);}
+
+/* ── HERO ── */
+.hero{background:var(--primary);position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 68% 35%, rgba(57,186,46,.14) 0%, transparent 55%);}
+.hero-inner{max-width:760px;margin:0 auto;padding:52px 24px 44px;position:relative;z-index:1;}
+.hero-eyebrow{font-size:13px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--accent);margin-bottom:12px;}
+.hero-h1{font-family:var(--font-head);font-size:clamp(28px,4vw,40px);font-weight:900;color:#fff;line-height:1.15;margin-bottom:10px;letter-spacing:-.5px;}
+.hero-sub{font-size:15.5px;color:var(--on-dark);}
+
+/* ── CONTENT ── */
+.wrap{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+.legal-card h2{font-family:var(--font-head);font-size:20px;font-weight:800;color:var(--primary);margin:36px 0 14px;padding-top:4px;}
+.legal-card h2:first-of-type{margin-top:0;}
+.legal-card p{font-size:15.5px;color:var(--text);margin-bottom:14px;}
+.legal-card ul,.legal-card ol{margin:0 0 14px 22px;font-size:15.5px;color:var(--text);}
+.legal-card li{margin-bottom:8px;}
+.legal-card a{color:var(--accent-text);font-weight:600;text-decoration:none;}
+.legal-card a:hover{text-decoration:underline;}
+.legal-card strong{color:var(--primary);}
+.updated-note{font-size:13.5px;color:var(--muted);margin-bottom:28px;padding-bottom:20px;border-bottom:1px solid var(--border);}
+.callout{background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);padding:18px 20px;margin:18px 0;font-size:14.5px;color:var(--text);}
+.callout strong{display:block;color:var(--primary);margin-bottom:4px;font-size:14px;text-transform:uppercase;letter-spacing:.3px;}
+.contact-box{background:var(--primary);border-radius:var(--r-xl);padding:26px 24px;color:#fff;margin-top:36px;}
+.contact-box h3{font-family:var(--font-head);font-size:17px;font-weight:800;margin-bottom:10px;}
+.contact-box p{color:var(--on-dark);font-size:14.5px;margin-bottom:4px;}
+.contact-box a{color:#fff;font-weight:700;text-decoration:none;}
+.contact-box a:hover{text-decoration:underline;}
+
+/* ── FOOTER ── */
+footer{background:var(--primary);border-top:1px solid rgba(255,255,255,.07);padding:44px 24px 26px;}
+.foot-inner{max-width:1140px;margin:0 auto;text-align:center;}
+.foot-logo{font-family:var(--font-head);font-size:19px;font-weight:900;color:#fff;margin-bottom:10px;}
+.foot-logo span{color:var(--accent);}
+.foot-address{font-size:14px;color:var(--on-dark);margin-bottom:6px;}
+.foot-contact-line{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:6px;font-size:14px;color:var(--on-dark);margin-bottom:18px;}
+.foot-contact-line a{color:var(--on-dark);text-decoration:none;white-space:nowrap;}
+.foot-contact-line a:hover{color:#fff;}
+.foot-contact-line .dot{color:rgba(169,194,196,.5);}
+.foot-legal{display:flex;gap:20px;justify-content:center;margin-bottom:16px;}
+.foot-legal a{font-size:13px;color:var(--on-dark);text-decoration:none;}
+.foot-legal a:hover{color:#fff;}
+.foot-copy{font-size:12px;color:rgba(169,194,196,.55);}
+
+@media(max-width:640px){
+  .hero-inner{padding:40px 20px 32px;}
+}
+</style>
+</head>
+<body>
+
+<div class="wa-fab">
+  <a href="https://api.whatsapp.com/send?phone=6588225335" class="wa-btn" target="_blank" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 3C8.82 3 3 8.82 3 16c0 2.32.63 4.5 1.73 6.38L3 29l6.8-1.7A12.92 12.92 0 0016 29c7.18 0 13-5.82 13-13S23.18 3 16 3zm-3.28 7.44c-.21 0-.55.08-.84.39-.29.31-1.1 1.07-1.1 2.61s1.13 3.03 1.29 3.24c.16.21 2.19 3.47 5.38 4.73.75.32 1.34.51 1.79.65.75.23 1.43.2 1.97.12.6-.09 1.85-.76 2.11-1.49.26-.73.26-1.35.18-1.49-.08-.13-.29-.21-.6-.37-.31-.16-1.85-.91-2.14-1.01-.29-.1-.5-.16-.71.16-.21.31-.81 1.01-.99 1.22-.18.21-.37.24-.68.08-.31-.16-1.3-.48-2.47-1.53-.91-.81-1.53-1.82-1.71-2.13-.18-.31-.02-.48.13-.63.14-.14.31-.37.47-.55.16-.18.21-.31.31-.52.1-.21.05-.39-.03-.55-.08-.16-.71-1.71-.97-2.34-.26-.63-.52-.54-.71-.54z"/></svg>
+  </a>
+</div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="logo">Sg<span>CV</span>hub</a>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/brands">Brands</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <p class="hero-eyebrow">Legal</p>
+    <h1 class="hero-h1">Terms of Use</h1>
+    <p class="hero-sub">The terms and conditions governing your use of this website.</p>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="legal-card">
+    <p class="updated-note">Last updated: 26 July 2026</p>
+
+    <p>These Terms of Use ("<strong>Terms</strong>") govern your access to and use of the SgCVhub website (<strong>www.sgcvhub.com</strong>), operated by Singapore Commercial Vehicle Hub Pte Ltd ("<strong>SgCVhub</strong>", "<strong>we</strong>", "<strong>us</strong>", or "<strong>our</strong>"). By using our website, you agree to be bound by these Terms. If you do not agree, please do not use this website.</p>
+
+    <h2>1. About us</h2>
+    <p>SgCVhub markets and sells new and used commercial vehicles in Singapore, including Foton, Mitsubishi Fuso, and Opel models, and offers trade-in, vehicle scrapping, financing, and insurance-related services to support our customers.</p>
+
+    <h2>2. Vehicle information &amp; pricing</h2>
+    <p>We make reasonable efforts to ensure vehicle specifications, pricing, promotions, and availability shown on this website are accurate and up to date. However:</p>
+    <ul>
+      <li>Vehicle pricing, COE-related figures, rebates, and surcharges (such as those under CVES or HVZES) are subject to change based on prevailing LTA regulations and COE bidding results, without prior notice.</li>
+      <li>Vehicle availability, colours, and configurations are subject to stock and manufacturer allocation at the time of your enquiry.</li>
+      <li>Images used on this website are for illustrative purposes and may not exactly reflect the final specification of the vehicle delivered.</li>
+      <li>Any quotation provided is not final until confirmed in writing by our sales team.</li>
+    </ul>
+
+    <h2>3. Trade-in &amp; scrapping enquiries</h2>
+    <p>Where you submit a trade-in or vehicle scrapping enquiry through our website, any valuation provided is indicative and subject to physical inspection of the vehicle. You are responsible for ensuring the accuracy of the vehicle information and LTA OneMotoring Access Code you provide to us.</p>
+
+    <h2>4. Third-party links</h2>
+    <p>Our website may contain links to third-party websites, such as <a href="https://onemotoring.lta.gov.sg" target="_blank" rel="noopener">LTA OneMotoring</a> or Sgcarmart, for your convenience. We do not control and are not responsible for the content, accuracy, or privacy practices of these third-party sites.</p>
+
+    <h2>5. Intellectual property</h2>
+    <p>All content on this website — including text, graphics, logos, and images — is owned by or licensed to SgCVhub, except for manufacturer trademarks and vehicle imagery, which remain the property of their respective brand owners (Foton, Mitsubishi Fuso, Opel). You may not reproduce, distribute, or use our content for commercial purposes without our prior written consent.</p>
+
+    <h2>6. Acceptable use</h2>
+    <p>You agree not to use this website to:</p>
+    <ul>
+      <li>Submit false, misleading, or fraudulent enquiries</li>
+      <li>Attempt to gain unauthorised access to our systems or data</li>
+      <li>Interfere with the proper functioning of the website</li>
+      <li>Use automated tools to scrape or extract content without our permission</li>
+    </ul>
+
+    <h2>7. Limitation of liability</h2>
+    <p>To the fullest extent permitted by law, SgCVhub shall not be liable for any indirect, incidental, or consequential loss arising from your use of this website, including reliance on pricing, specifications, or regulatory information (such as COE or CVES/HVZES figures) that may change after publication. Nothing in these Terms excludes or limits liability that cannot be excluded under Singapore law.</p>
+
+    <h2>8. Governing law</h2>
+    <p>These Terms are governed by the laws of the Republic of Singapore, and any disputes arising from your use of this website shall be subject to the exclusive jurisdiction of the Singapore courts.</p>
+
+    <h2>9. Changes to these Terms</h2>
+    <p>We may update these Terms from time to time. Continued use of the website after changes are posted constitutes your acceptance of the updated Terms.</p>
+
+    <h2>10. Related policies</h2>
+    <p>Please also refer to our <a href="/privacy">Privacy Policy</a> for details on how we collect, use, and protect your personal data.</p>
+
+    <div class="contact-box">
+      <h3>Questions about these Terms?</h3>
+      <p>If you have any questions about these Terms of Use, please reach out:</p>
+      <p><a href="mailto:ask@sgcvhub.com">ask@sgcvhub.com</a></p>
+      <p><a href="tel:+6588225335">+65 8822 5335</a></p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="foot-inner">
+    <div class="foot-logo">Sg<span>CV</span>hub</div>
+    <div class="foot-address">8 Tuas Ave 18, Singapore 638892</div>
+    <div class="foot-contact-line">
+      <a href="mailto:ask@sgcvhub.com">ask@sgcvhub.com</a><span class="dot">·</span><a href="tel:88225335">+65 8822 5335</a>
+    </div>
+    <div class="foot-legal"><a href="/privacy">Privacy Policy</a><a href="/terms">Terms</a></div>
+    <div class="foot-copy">&copy; 2026 Singapore Commercial Vehicle Hub Pte Ltd. All rights reserved.</div>
+  </div>
+</footer>
+
+</body>
+</html>

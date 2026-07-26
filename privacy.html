@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy | SgCVhub — Singapore's Commercial Vehicle Hub</title>
+<meta name="description" content="How SgCVhub collects, uses, and protects your personal data in accordance with Singapore's Personal Data Protection Act (PDPA).">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --primary:#0F3741; --primary-d:#091f26; --primary-l:#1a4f5e;
+  --accent:#39BA2E; --accent-text:#2F9E26; --accent-muted:#6CAB64; --accent-pale:rgba(57,186,46,.08);
+  --bg:#FFFFFF; --mist:#F1F6F3; --card:#F4F9F6; --border:#E0ECE6; --border-hover:#C7DBD2;
+  --text:#3A4E52; --muted:#7D8C8A; --on-dark:#A9C2C4; --btn-label:#08251C;
+  --wa:#25D366; --wa-d:#1da851;
+  --font-head:'Outfit',sans-serif; --font-body:'Work Sans',sans-serif;
+  --r-sm:6px;--r-md:8px;--r-lg:14px;--r-xl:20px;--r-2xl:28px;--r-pill:999px;
+  --sh1:0 1px 3px rgba(15,55,65,.06);--sh2:0 4px 12px rgba(15,55,65,.09);
+  --sh3:0 10px 30px rgba(15,55,65,.13);
+  --sh-wa:0 6px 20px rgba(37,211,102,.40);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--font-body);background:var(--bg);color:var(--text);line-height:1.7;}
+
+/* ── STICKY WHATSAPP ── */
+.wa-fab{position:fixed;bottom:28px;right:24px;z-index:500;}
+.wa-btn{width:56px;height:56px;background:var(--wa);border-radius:var(--r-pill);display:flex;align-items:center;justify-content:center;box-shadow:var(--sh-wa);cursor:pointer;text-decoration:none;transition:transform 160ms,filter 160ms;}
+.wa-btn:hover{transform:scale(1.08);filter:brightness(1.05);}
+.wa-btn svg{width:28px;height:28px;fill:#fff;}
+
+/* ── NAV ── */
+nav{background:var(--primary);position:sticky;top:0;z-index:200;box-shadow:0 2px 16px rgba(15,55,65,.22);}
+.nav-inner{max-width:1140px;margin:0 auto;padding:0 24px;display:flex;align-items:center;height:68px;gap:4px;}
+.logo{font-family:var(--font-head);font-size:22px;font-weight:900;color:#fff;text-decoration:none;letter-spacing:-.6px;margin-right:auto;display:flex;align-items:center;gap:2px;}
+.logo span{color:var(--accent);}
+.nav-links{display:flex;align-items:center;gap:2px;list-style:none;}
+.nav-links a{font-size:14.5px;font-weight:500;color:var(--on-dark);text-decoration:none;padding:6px 11px;border-radius:var(--r-md);transition:color 120ms,background 120ms;}
+.nav-links a:hover{color:#fff;background:rgba(255,255,255,.08);}
+
+/* ── HERO ── */
+.hero{background:var(--primary);position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 68% 35%, rgba(57,186,46,.14) 0%, transparent 55%);}
+.hero-inner{max-width:760px;margin:0 auto;padding:52px 24px 44px;position:relative;z-index:1;}
+.hero-eyebrow{font-size:13px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--accent);margin-bottom:12px;}
+.hero-h1{font-family:var(--font-head);font-size:clamp(28px,4vw,40px);font-weight:900;color:#fff;line-height:1.15;margin-bottom:10px;letter-spacing:-.5px;}
+.hero-sub{font-size:15.5px;color:var(--on-dark);}
+
+/* ── CONTENT ── */
+.wrap{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+.legal-card{background:var(--bg);}
+.legal-card h2{font-family:var(--font-head);font-size:20px;font-weight:800;color:var(--primary);margin:36px 0 14px;padding-top:4px;}
+.legal-card h2:first-of-type{margin-top:0;}
+.legal-card p{font-size:15.5px;color:var(--text);margin-bottom:14px;}
+.legal-card ul,.legal-card ol{margin:0 0 14px 22px;font-size:15.5px;color:var(--text);}
+.legal-card li{margin-bottom:8px;}
+.legal-card a{color:var(--accent-text);font-weight:600;text-decoration:none;}
+.legal-card a:hover{text-decoration:underline;}
+.legal-card strong{color:var(--primary);}
+.updated-note{font-size:13.5px;color:var(--muted);margin-bottom:28px;padding-bottom:20px;border-bottom:1px solid var(--border);}
+.callout{background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);padding:18px 20px;margin:18px 0;font-size:14.5px;color:var(--text);}
+.callout strong{display:block;color:var(--primary);margin-bottom:4px;font-size:14px;text-transform:uppercase;letter-spacing:.3px;}
+.contact-box{background:var(--primary);border-radius:var(--r-xl);padding:26px 24px;color:#fff;margin-top:36px;}
+.contact-box h3{font-family:var(--font-head);font-size:17px;font-weight:800;margin-bottom:10px;}
+.contact-box p{color:var(--on-dark);font-size:14.5px;margin-bottom:4px;}
+.contact-box a{color:#fff;font-weight:700;text-decoration:none;}
+.contact-box a:hover{text-decoration:underline;}
+
+/* ── FOOTER ── */
+footer{background:var(--primary);border-top:1px solid rgba(255,255,255,.07);padding:44px 24px 26px;}
+.foot-inner{max-width:1140px;margin:0 auto;text-align:center;}
+.foot-logo{font-family:var(--font-head);font-size:19px;font-weight:900;color:#fff;margin-bottom:10px;}
+.foot-logo span{color:var(--accent);}
+.foot-address{font-size:14px;color:var(--on-dark);margin-bottom:6px;}
+.foot-contact-line{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:6px;font-size:14px;color:var(--on-dark);margin-bottom:18px;}
+.foot-contact-line a{color:var(--on-dark);text-decoration:none;white-space:nowrap;}
+.foot-contact-line a:hover{color:#fff;}
+.foot-contact-line .dot{color:rgba(169,194,196,.5);}
+.foot-legal{display:flex;gap:20px;justify-content:center;margin-bottom:16px;}
+.foot-legal a{font-size:13px;color:var(--on-dark);text-decoration:none;}
+.foot-legal a:hover{color:#fff;}
+.foot-copy{font-size:12px;color:rgba(169,194,196,.55);}
+
+@media(max-width:640px){
+  .hero-inner{padding:40px 20px 32px;}
+}
+</style>
+</head>
+<body>
+
+<div class="wa-fab">
+  <a href="https://api.whatsapp.com/send?phone=6588225335" class="wa-btn" target="_blank" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 3C8.82 3 3 8.82 3 16c0 2.32.63 4.5 1.73 6.38L3 29l6.8-1.7A12.92 12.92 0 0016 29c7.18 0 13-5.82 13-13S23.18 3 16 3zm-3.28 7.44c-.21 0-.55.08-.84.39-.29.31-1.1 1.07-1.1 2.61s1.13 3.03 1.29 3.24c.16.21 2.19 3.47 5.38 4.73.75.32 1.34.51 1.79.65.75.23 1.43.2 1.97.12.6-.09 1.85-.76 2.11-1.49.26-.73.26-1.35.18-1.49-.08-.13-.29-.21-.6-.37-.31-.16-1.85-.91-2.14-1.01-.29-.1-.5-.16-.71.16-.21.31-.81 1.01-.99 1.22-.18.21-.37.24-.68.08-.31-.16-1.3-.48-2.47-1.53-.91-.81-1.53-1.82-1.71-2.13-.18-.31-.02-.48.13-.63.14-.14.31-.37.47-.55.16-.18.21-.31.31-.52.1-.21.05-.39-.03-.55-.08-.16-.71-1.71-.97-2.34-.26-.63-.52-.54-.71-.54z"/></svg>
+  </a>
+</div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="logo">Sg<span>CV</span>hub</a>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/brands">Brands</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <p class="hero-eyebrow">Legal</p>
+    <h1 class="hero-h1">Privacy Policy</h1>
+    <p class="hero-sub">How we collect, use, and protect your personal data.</p>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="legal-card">
+    <p class="updated-note">Last updated: 26 July 2026</p>
+
+    <p>Singapore Commercial Vehicle Hub Pte Ltd ("<strong>SgCVhub</strong>", "<strong>we</strong>", "<strong>us</strong>", or "<strong>our</strong>") is committed to protecting the personal data of our customers and website visitors in accordance with the <strong>Personal Data Protection Act 2012</strong> ("<strong>PDPA</strong>") of Singapore. This Privacy Policy explains what personal data we collect, how we use it, and the rights you have over it.</p>
+
+    <h2>1. What personal data we collect</h2>
+    <p>We collect personal data primarily when you submit an enquiry through our website's contact form, WhatsApp, email, or phone. Depending on the reason for your enquiry, this may include:</p>
+    <ul>
+      <li>Company name and contact name</li>
+      <li>Email address and contact/phone number</li>
+      <li>The model(s) you're interested in (for brochure or spec sheet requests)</li>
+      <li>Vehicle registration number (for trade-in or scrapping enquiries)</li>
+      <li>Any message or additional details you choose to share with us</li>
+    </ul>
+    <div class="callout">
+      <strong>LTA OneMotoring Access Code</strong>
+      For trade-in and scrapping enquiries, we ask for your vehicle's LTA OneMotoring Access Code to verify its registration and ownership details. This code is transmitted to us once by email and is <strong>not stored</strong> in our customer database or CRM system. We do not store or have access to your Singpass credentials at any point.
+    </div>
+
+    <h2>2. How we use your personal data</h2>
+    <p>We use the personal data you provide to:</p>
+    <ul>
+      <li>Respond to your enquiries and requests (e.g. sending brochures or spec sheets)</li>
+      <li>Process trade-in and vehicle scrapping applications</li>
+      <li>Provide quotations, financing, or insurance information you've requested</li>
+      <li>Follow up on your enquiry by phone, email, or WhatsApp</li>
+      <li>Improve our products, services, and website</li>
+      <li>Send you relevant updates or promotions, where you have not opted out</li>
+    </ul>
+
+    <h2>3. Who we share your data with</h2>
+    <p>We do not sell or rent your personal data to third parties. We may share your data with the following service providers, who are contractually bound to protect it and only use it to provide services to us:</p>
+    <ul>
+      <li><strong>Brevo</strong> — our customer relationship management (CRM) and email delivery platform, used to manage enquiries and send you requested information</li>
+      <li><strong>Vercel</strong> — our website hosting provider</li>
+    </ul>
+    <p>Where personal data is transferred to or processed by service providers located outside Singapore, we take reasonable steps to ensure it receives a standard of protection comparable to the PDPA.</p>
+
+    <h2>4. Data retention</h2>
+    <p>We retain your personal data only for as long as necessary to fulfil the purposes for which it was collected, or as required by law. Enquiry and CRM records are generally retained for the duration of our business relationship with you, plus a reasonable period afterward for record-keeping. LTA OneMotoring Access Codes are never retained beyond the immediate verification of your trade-in or scrapping enquiry.</p>
+
+    <h2>5. Cookies and website analytics</h2>
+    <p>Our website does not currently use tracking cookies or third-party analytics scripts. If we introduce analytics or advertising tools (e.g. for Facebook, Instagram, or Google marketing) in the future, we will update this policy accordingly and provide appropriate notice.</p>
+
+    <h2>6. Your rights</h2>
+    <p>Under the PDPA, you have the right to:</p>
+    <ul>
+      <li><strong>Access</strong> the personal data we hold about you</li>
+      <li><strong>Correct</strong> any inaccurate or outdated personal data</li>
+      <li><strong>Withdraw consent</strong> for us to collect, use, or disclose your personal data (including for marketing communications)</li>
+    </ul>
+    <p>To exercise any of these rights, please contact us using the details below. We will respond to your request within a reasonable timeframe.</p>
+
+    <h2>7. Do Not Call (DNC) Registry</h2>
+    <p>If you have registered your phone number with Singapore's <a href="https://www.dnc.gov.sg" target="_blank" rel="noopener">Do Not Call Registry</a>, we will not send you marketing messages via phone call, SMS, or fax to that number unless you have given us clear and unambiguous consent to do so.</p>
+
+    <h2>8. Data security</h2>
+    <p>We implement reasonable administrative, technical, and physical safeguards to protect your personal data against unauthorised access, collection, use, disclosure, or similar risks.</p>
+
+    <h2>9. Changes to this policy</h2>
+    <p>We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. The "Last updated" date at the top of this page will reflect the most recent revision.</p>
+
+    <div class="contact-box">
+      <h3>Questions about your data?</h3>
+      <p>If you have any questions, requests, or concerns about how we handle your personal data, please reach out:</p>
+      <p><a href="mailto:ask@sgcvhub.com">ask@sgcvhub.com</a></p>
+      <p><a href="tel:+6588225335">+65 8822 5335</a></p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="foot-inner">
+    <div class="foot-logo">Sg<span>CV</span>hub</div>
+    <div class="foot-address">8 Tuas Ave 18, Singapore 638892</div>
+    <div class="foot-contact-line">
+      <a href="mailto:ask@sgcvhub.com">ask@sgcvhub.com</a><span class="dot">·</span><a href="tel:88225335">+65 8822 5335</a>
+    </div>
+    <div class="foot-legal"><a href="/privacy">Privacy Policy</a><a href="/terms">Terms</a></div>
+    <div class="foot-copy">&copy; 2026 Singapore Commercial Vehicle Hub Pte Ltd. All rights reserved.</div>
+  </div>
+</footer>
+
+</body>
+</html>
