@@ -127,9 +127,11 @@ footer{background:var(--primary);border-top:1px solid rgba(255,255,255,.07);padd
 .foot-logo{font-family:var(--font-head);font-size:21.5px;font-weight:900;color:#fff;margin-bottom:10px;}
 .foot-logo span{color:var(--accent);}
 .foot-tagline{font-size:15px;color:var(--on-dark);line-height:1.6;margin-bottom:14px;max-width:260px;}
-.foot-contact{font-size:15px;color:var(--on-dark);line-height:2;margin-bottom:14px;}
-.foot-contact a{color:var(--on-dark);text-decoration:none;}
-.foot-contact a:hover{color:#fff;}
+.foot-address{font-size:15px;color:var(--on-dark);margin-bottom:6px;}
+.foot-contact-line{display:flex;align-items:center;flex-wrap:wrap;gap:6px;font-size:15px;color:var(--on-dark);margin-bottom:14px;}
+.foot-contact-line a{color:var(--on-dark);text-decoration:none;white-space:nowrap;}
+.foot-contact-line a:hover{color:#fff;}
+.foot-contact-line .dot{color:rgba(169,194,196,.5);}
 .foot-col-title{font-family:var(--font-head);font-size:14.5px;font-weight:800;text-transform:uppercase;letter-spacing:.5px;color:#fff;margin-bottom:12px;}
 .foot-links{list-style:none;}
 .foot-links li{margin-bottom:9px;}
@@ -315,7 +317,7 @@ footer{background:var(--primary);border-top:1px solid rgba(255,255,255,.07);padd
 
       <div class="success-msg" id="successMsg">
         <h3>Thanks — we've got it!</h3>
-        <p>Your enquiry has been received. Our team will reach out within one business day. For faster response, feel free to WhatsApp us at 8822 5335.</p>
+        <p>Your enquiry has been received. Redirecting you now...</p>
       </div>
     </div>
 
@@ -357,10 +359,9 @@ footer{background:var(--primary);border-top:1px solid rgba(255,255,255,.07);padd
       <div>
         <div class="foot-logo">Sg<span>CV</span>hub</div>
         <p class="foot-tagline">Singapore's authorised reseller for Foton, Mitsubishi Fuso &amp; Opel commercial vehicles.</p>
-        <div class="foot-contact">
-          8 Tuas Ave 18, Singapore 638892<br>
-          <a href="mailto:ask@sgcvhub.com">ask@sgcvhub.com</a><br>
-          <a href="tel:88225335">+65 8822 5335</a>
+        <div class="foot-address">8 Tuas Ave 18, Singapore 638892</div>
+        <div class="foot-contact-line">
+          <a href="mailto:ask@sgcvhub.com">ask@sgcvhub.com</a><span class="dot">·</span><a href="tel:88225335">+65 8822 5335</a>
         </div>
       </div>
       <div>
@@ -448,6 +449,9 @@ footer{background:var(--primary);border-top:1px solid rgba(255,255,255,.07);padd
   // Update this if you deploy the function under a different path/domain.
   var SUBMIT_ENDPOINT = '/api/contact';
 
+  // Where to send people after a successful submission.
+  var THANK_YOU_URL = '/thank-you';
+
   form.addEventListener('submit', function(e){
     e.preventDefault();
     var valid = true;
@@ -506,6 +510,10 @@ footer{background:var(--primary);border-top:1px solid rgba(255,255,255,.07);padd
       .then(function(){
         form.style.display = 'none';
         successMsg.classList.add('show');
+        // Brief pause so the user sees confirmation before leaving the page.
+        setTimeout(function(){
+          window.location.href = THANK_YOU_URL;
+        }, 900);
       })
       .catch(function(){
         submitBtn.disabled = false;
