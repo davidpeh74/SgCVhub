@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page Not Found | SgCVhub — Singapore's Commercial Vehicle Hub</title>
+<meta name="robots" content="noindex, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --primary:#0F3741; --primary-d:#091f26; --primary-l:#1a4f5e;
+  --accent:#39BA2E; --accent-text:#2F9E26; --accent-muted:#6CAB64; --accent-pale:rgba(57,186,46,.08);
+  --bg:#FFFFFF; --mist:#F1F6F3; --card:#F4F9F6; --border:#E0ECE6; --border-hover:#C7DBD2;
+  --text:#3A4E52; --muted:#7D8C8A; --on-dark:#A9C2C4; --btn-label:#08251C;
+  --wa:#25D366; --wa-d:#1da851;
+  --font-head:'Outfit',sans-serif; --font-body:'Work Sans',sans-serif;
+  --sp1:4px;--sp2:8px;--sp3:12px;--sp4:16px;--sp5:24px;--sp6:32px;--sp7:48px;--sp8:64px;--sp9:96px;
+  --r-sm:6px;--r-md:8px;--r-lg:14px;--r-xl:20px;--r-2xl:28px;--r-pill:999px;
+  --sh1:0 1px 3px rgba(15,55,65,.06);--sh2:0 4px 12px rgba(15,55,65,.09);
+  --sh3:0 10px 30px rgba(15,55,65,.13);--sh-cta:0 6px 20px rgba(57,186,46,.32);
+  --sh-wa:0 6px 20px rgba(37,211,102,.40);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--font-body);background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden;}
+
+/* NAV (matches site) */
+nav{background:var(--primary);position:sticky;top:0;z-index:200;box-shadow:0 2px 16px rgba(15,55,65,.22);}
+.nav-inner{max-width:1140px;margin:0 auto;padding:0 24px;display:flex;align-items:center;height:68px;gap:4px;}
+.logo{font-family:var(--font-head);font-size:22px;font-weight:900;color:#fff;text-decoration:none;letter-spacing:-.6px;margin-right:auto;display:flex;align-items:center;gap:2px;}
+.logo span{color:var(--accent);}
+
+/* 404 SECTION */
+.err-wrap{min-height:calc(100vh - 68px - 210px);display:flex;align-items:center;justify-content:center;padding:var(--sp8) var(--sp4);background:var(--mist);}
+.err-card{max-width:640px;width:100%;text-align:center;}
+.err-code{font-family:var(--font-head);font-size:clamp(72px,14vw,120px);font-weight:900;color:var(--primary);line-height:1;letter-spacing:-2px;position:relative;}
+.err-code span{color:var(--accent);}
+.err-eyebrow{font-family:var(--font-head);font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:var(--sp3) 0 var(--sp2);}
+.err-h1{font-family:var(--font-head);font-size:clamp(22px,3vw,28px);font-weight:800;color:var(--primary);margin-bottom:var(--sp4);}
+.err-sub{font-size:16px;color:var(--text);max-width:440px;margin:0 auto var(--sp7);}
+
+.err-links{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:var(--sp7);}
+.err-link{background:#fff;border:1px solid var(--border);border-radius:var(--r-lg);padding:var(--sp4) var(--sp5);display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--primary);font-weight:600;font-size:14.5px;transition:border-color 150ms,transform 150ms,box-shadow 150ms;text-align:left;}
+.err-link:hover{border-color:var(--border-hover);transform:translateY(-2px);box-shadow:var(--sh2);}
+.err-link svg{flex-shrink:0;width:20px;height:20px;stroke:var(--accent-text);}
+
+.err-actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;}
+.btn-wa{background:var(--wa);color:#fff;font-family:var(--font-body);font-weight:700;font-size:15px;padding:13px 26px;border-radius:var(--r-pill);text-decoration:none;display:inline-flex;align-items:center;gap:8px;box-shadow:var(--sh-wa);transition:filter 150ms,transform 150ms;}
+.btn-wa:hover{filter:brightness(1.06);transform:translateY(-2px);}
+.btn-ghost{background:#fff;color:var(--primary);font-family:var(--font-body);font-weight:600;font-size:15px;padding:13px 26px;border-radius:var(--r-pill);border:1.5px solid var(--border);text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:background 150ms,border-color 150ms;}
+.btn-ghost:hover{background:var(--mist);border-color:var(--border-hover);}
+
+/* FOOTER (compact) */
+footer{background:var(--primary-d);padding:var(--sp7) var(--sp4) var(--sp5);}
+.foot-inner{max-width:1140px;margin:0 auto;text-align:center;}
+.foot-logo{font-family:var(--font-head);font-size:18px;font-weight:900;color:#fff;margin-bottom:var(--sp2);}
+.foot-logo span{color:var(--accent);}
+.foot-contact{margin-bottom:var(--sp4);}
+.foot-address{font-size:13px;color:var(--on-dark);margin-bottom:6px;}
+.foot-contact-line{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:6px;font-size:13px;color:var(--on-dark);}
+.foot-contact-line a{color:var(--on-dark);text-decoration:none;white-space:nowrap;}
+.foot-contact-line a:hover{color:#fff;}
+.foot-contact-line .dot{color:rgba(169,194,196,.5);}
+.foot-copy{font-size:12px;color:var(--on-dark);opacity:.7;}
+
+@media(max-width:640px){
+  .err-links{grid-template-columns:1fr;}
+  .err-actions{flex-direction:column;}
+  .err-actions a{justify-content:center;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="logo">Sg<span>CV</span>hub</a>
+  </div>
+</nav>
+
+<div class="err-wrap">
+  <div class="err-card">
+    <div class="err-code">4<span>0</span>4</div>
+    <p class="err-eyebrow">Wrong turn</p>
+    <h1 class="err-h1">This page isn't in the lineup.</h1>
+    <p class="err-sub">The page you're looking for may have moved or no longer exists. Here's how to get back on the road.</p>
+
+    <div class="err-links">
+      <a href="/" class="err-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>
+        Home
+      </a>
+      <a href="/brands" class="err-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="7" width="15" height="13" rx="1"/><path d="M16 10h3l4 4v6h-7"/><circle cx="6" cy="20" r="2"/><circle cx="18" cy="20" r="2"/></svg>
+        Compare the Brands
+      </a>
+      <a href="/contact" class="err-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        Contact Us
+      </a>
+      <a href="/blog" class="err-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        Read the Blog
+      </a>
+    </div>
+
+    <div class="err-actions">
+      <a href="https://api.whatsapp.com/send?phone=6588225335" class="btn-wa" target="_blank">
+        <svg width="14" height="14" viewBox="0 0 32 32" fill="currentColor"><path d="M16 3C8.82 3 3 8.82 3 16c0 2.32.63 4.5 1.73 6.38L3 29l6.8-1.7A12.92 12.92 0 0016 29c7.18 0 13-5.82 13-13S23.18 3 16 3zm-3.28 7.44c-.21 0-.55.08-.84.39-.29.31-1.1 1.07-1.1 2.61s1.13 3.03 1.29 3.24c.16.21 2.19 3.47 5.38 4.73.75.32 1.34.51 1.79.65.75.23 1.43.2 1.97.12.6-.09 1.85-.76 2.11-1.49.26-.73.26-1.35.18-1.49-.08-.13-.29-.21-.6-.37-.31-.16-1.85-.91-2.14-1.01-.29-.1-.5-.16-.71.16-.21.31-.81 1.01-.99 1.22-.18.21-.37.24-.68.08-.31-.16-1.3-.48-2.47-1.53-.91-.81-1.53-1.82-1.71-2.13-.18-.31-.02-.48.13-.63.14-.14.31-.37.47-.55.16-.18.21-.31.31-.52.1-.21.05-.39-.03-.55-.08-.16-.71-1.71-.97-2.34-.26-.63-.52-.54-.71-.54z"/></svg>
+        WhatsApp Us
+      </a>
+      <a href="/" class="btn-ghost">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+        Back to Home
+      </a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="foot-inner">
+    <div class="foot-logo">Sg<span>CV</span>hub</div>
+    <div class="foot-contact">
+      <div class="foot-address">8 Tuas Ave 18, Singapore 638892</div>
+      <div class="foot-contact-line">
+        <a href="mailto:ask@sgcvhub.com">ask@sgcvhub.com</a><span class="dot">·</span><a href="tel:88225335">8822 5335</a>
+      </div>
+    </div>
+    <div class="foot-copy">&copy; 2026 SgCVhub. All rights reserved.</div>
+  </div>
+</footer>
+
+</body>
+</html>
