@@ -13,7 +13,7 @@
 //                           ID is in the URL)
 // 2. In Brevo: Contacts → Settings → Contact Attributes, add these as
 //    "Normal" text attributes if they don't already exist:
-//      COMPANY, PHONE, ENQUIRY, MODEL_INTEREST, VEHICLE_NUMBER, MESSAGE
+//      COMPANY, PHONE, ENQUIRY, MODEL_INTEREST, VEHICLE_NUMBER, MESSAGE, LEASE_DURATION, FLEET_SIZE
 //    (FIRSTNAME/LASTNAME/EMAIL already exist by default.)
 // 3. Never put BREVO_API_KEY in the HTML/JS that runs in the browser —
 //    it must only live here, server-side.
