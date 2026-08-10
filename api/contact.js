@@ -33,7 +33,9 @@ export default async function handler(req, res) {
     modelInterest,
     vehicleNumber,
     accessCode,
-    message
+    message,
+    leaseDuration,
+    fleetSize
   } = req.body || {};
 
   // ── Basic server-side validation (never trust the client alone) ──
@@ -78,7 +80,9 @@ export default async function handler(req, res) {
         ENQUIRY: reason,
         MODEL_INTEREST: modelInterest || '',
         VEHICLE_NUMBER: vehicleNumber || '',
-        MESSAGE: message || ''
+        MESSAGE: message || '',
+        LEASE_DURATION: leaseDuration || undefined,
+        FLEET_SIZE: fleetSize ? Number(fleetSize) : undefined,
       },
       updateEnabled: true
     };
