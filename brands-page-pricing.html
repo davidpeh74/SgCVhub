@@ -72,6 +72,70 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);margin:
 </style>
 </head>
 <body>
+<style>
+/* ── SgCVhub shared site chrome (nav / footer / WhatsApp FAB) ── */
+.sgc-wa-fab{position:fixed;bottom:28px;right:24px;z-index:500;}
+.sgc-wa-btn{width:56px;height:56px;background:#25D366;border-radius:999px;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(37,211,102,.40);cursor:pointer;text-decoration:none;transition:transform 160ms,filter 160ms;}
+.sgc-wa-btn:hover{transform:scale(1.08);filter:brightness(1.05);}
+.sgc-wa-btn svg{width:28px;height:28px;fill:#fff;}
+.sgc-nav{background:#0F3741;position:sticky;top:0;z-index:200;box-shadow:0 2px 16px rgba(15,55,65,.22);}
+.sgc-nav-inner{max-width:1140px;margin:0 auto;padding:0 24px;display:flex;align-items:center;height:68px;gap:4px;font-family:'Outfit',sans-serif;}
+.sgc-logo{font-family:'Outfit',sans-serif;font-size:23px;font-weight:900;color:#fff;text-decoration:none;letter-spacing:-.6px;margin-right:auto;display:flex;align-items:center;gap:2px;}
+.sgc-logo span{color:#39BA2E;}
+.sgc-logo sup{font-size:11px;font-weight:600;color:#A9C2C4;letter-spacing:.5px;margin-left:1px;vertical-align:super;}
+.sgc-nav-links{display:flex;align-items:center;gap:2px;list-style:none;margin:0;padding:0;}
+.sgc-nav-links a{font-family:'Work Sans',sans-serif;font-size:15.5px;font-weight:500;color:#A9C2C4;text-decoration:none;padding:6px 11px;border-radius:8px;transition:color 120ms,background 120ms;}
+.sgc-nav-links a:hover,.sgc-nav-links a.active{color:#fff;background:rgba(255,255,255,.08);}
+.sgc-nav-wa{background:#25D366;color:#fff;font-family:'Work Sans',sans-serif;font-weight:700;font-size:15px;padding:7px 14px;border-radius:999px;border:none;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:5px;box-shadow:0 4px 12px rgba(37,211,102,.35);transition:filter 150ms,transform 150ms;white-space:nowrap;margin-left:6px;}
+.sgc-nav-wa:hover{filter:brightness(1.06);transform:translateY(-1px);}
+.sgc-footer{background:#0F3741;border-top:1px solid rgba(255,255,255,.07);padding:48px 24px 28px;font-family:'Work Sans',sans-serif;}
+.sgc-foot-inner{max-width:1140px;margin:0 auto;}
+.sgc-foot-top{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:32px;padding-bottom:32px;}
+@media(max-width:760px){.sgc-foot-top{grid-template-columns:1fr 1fr;}}
+.sgc-foot-logo{font-family:'Outfit',sans-serif;font-size:21.5px;font-weight:900;color:#fff;margin-bottom:10px;}
+.sgc-foot-logo span{color:#39BA2E;}
+.sgc-foot-tagline{font-size:15px;color:#A9C2C4;line-height:1.6;margin-bottom:14px;max-width:260px;}
+.sgc-foot-address{font-size:15px;color:#A9C2C4;margin-bottom:6px;}
+.sgc-foot-contact-line{display:flex;align-items:center;flex-wrap:wrap;gap:6px;font-size:15px;color:#A9C2C4;margin-bottom:14px;}
+.sgc-foot-contact-line a{color:#A9C2C4;text-decoration:none;white-space:nowrap;}
+.sgc-foot-contact-line a:hover{color:#fff;}
+.sgc-foot-contact-line .dot{color:rgba(169,194,196,.5);}
+.sgc-foot-col-title{font-family:'Outfit',sans-serif;font-size:14.5px;font-weight:800;text-transform:uppercase;letter-spacing:.5px;color:#fff;margin-bottom:12px;}
+.sgc-foot-links{list-style:none;margin:0;padding:0;}
+.sgc-foot-links li{margin-bottom:9px;}
+.sgc-foot-links a{font-size:15px;color:#A9C2C4;text-decoration:none;}
+.sgc-foot-links a:hover{color:#fff;}
+.sgc-foot-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:14px;color:#A9C2C4;}
+.sgc-foot-legal a{color:#A9C2C4;text-decoration:none;margin-left:16px;}
+.sgc-foot-legal a:hover{color:#fff;}
+</style>
+
+<div class="sgc-wa-fab">
+  <a href="https://api.whatsapp.com/send?phone=6588225335" class="sgc-wa-btn" target="_blank" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 3C8.82 3 3 8.82 3 16c0 2.32.63 4.5 1.73 6.38L3 29l6.8-1.7A12.92 12.92 0 0016 29c7.18 0 13-5.82 13-13S23.18 3 16 3zm-3.28 7.44c-.21 0-.55.08-.84.39-.29.31-1.1 1.07-1.1 2.61s1.13 3.03 1.29 3.24c.16.21 2.19 3.47 5.38 4.73.75.32 1.34.51 1.79.65.75.23 1.43.2 1.97.12.6-.09 1.85-.76 2.11-1.49.26-.73.26-1.35.18-1.49-.08-.13-.29-.21-.6-.37-.31-.16-1.85-.91-2.14-1.01-.29-.1-.5-.16-.71.16-.21.31-.81 1.01-.99 1.22-.18.21-.37.24-.68.08-.31-.16-1.3-.48-2.47-1.53-.91-.81-1.53-1.82-1.71-2.13-.18-.31-.02-.48.13-.63.14-.14.31-.37.47-.55.16-.18.21-.31.31-.52.1-.21.05-.39-.03-.55-.08-.16-.71-1.71-.97-2.34-.26-.63-.52-.54-.71-.54z"/></svg>
+  </a>
+</div>
+
+<nav class="sgc-nav">
+  <div class="sgc-nav-inner">
+    <a href="/" class="sgc-logo">Sg<span>CV</span>hub<sup>SG</sup></a>
+    <ul class="sgc-nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/brands" class="active">Brands</a></li>
+      <li><a href="/leasing">Leasing</a></li>
+      <li><a href="/customisation">Customisation</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+    <a href="https://api.whatsapp.com/send?phone=6588225335" class="sgc-nav-wa" target="_blank">
+      <svg width="14" height="14" viewBox="0 0 32 32" fill="currentColor"><path d="M16 3C8.82 3 3 8.82 3 16c0 2.32.63 4.5 1.73 6.38L3 29l6.8-1.7A12.92 12.92 0 0016 29c7.18 0 13-5.82 13-13S23.18 3 16 3zm-3.28 7.44c-.21 0-.55.08-.84.39-.29.31-1.1 1.07-1.1 2.61s1.13 3.03 1.29 3.24c.16.21 2.19 3.47 5.38 4.73.75.32 1.34.51 1.79.65.75.23 1.43.2 1.97.12.6-.09 1.85-.76 2.11-1.49.26-.73.26-1.35.18-1.49-.08-.13-.29-.21-.6-.37-.31-.16-1.85-.91-2.14-1.01-.29-.1-.5-.16-.71.16-.21.31-.81 1.01-.99 1.22-.18.21-.37.24-.68.08-.31-.16-1.3-.48-2.47-1.53-.91-.81-1.53-1.82-1.71-2.13-.18-.31-.02-.48.13-.63.14-.14.31-.37.47-.55.16-.18.21-.31.31-.52.1-.21.05-.39-.03-.55-.08-.16-.71-1.71-.97-2.34-.26-.63-.52-.54-.71-.54z"/></svg>
+      WhatsApp Us
+    </a>
+  </div>
+</nav>
+
+
 
 <div class="wrap">
   <p class="page-eyebrow">SgCVhub — Brands & Pricing</p>
@@ -90,8 +154,8 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);margin:
         <div class="mcard-head"><div class="mcard-name">Combo-e</div><div class="mcard-type">Compact electric van</div></div>
         <div class="mcard-body">
           <span class="rebate-pill">✓ CVES Band A</span>
-          <div class="price-row"><span class="price-nopromo">$49,800</span></div>
-          <div class="price-note">Before COE · after $15,000 CVES rebate</div>
+          <div class="price-row"><span class="price-before">$49,800</span><span class="price-after">$46,100</span></div>
+          <div class="price-note">After $15,000 CVES rebate · National Day promo, valid till 31 Aug 2026</div>
           <ul class="spec-list">
             <li><span class="k">Range (WLTP)</span><span class="v">350 km</span></li>
             <li><span class="k">Cargo volume</span><span class="v">3.8 m³</span></li>
@@ -149,7 +213,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);margin:
 
     <div class="model-grid">
       <div class="mcard">
-        <div class="mcard-head"><div class="mcard-name">eView Connect (L1H1)</div><div class="mcard-type">Standard electric van</div></div>
+        <div class="mcard-head"><div class="mcard-name">eView Connect 4.9m (L1)</div><div class="mcard-type">Standard electric van</div></div>
         <div class="mcard-body">
           <span class="rebate-pill">✓ CVES Band A</span>
           <div class="price-row"><span class="price-before">$56,500</span><span class="price-after">$41,500</span></div>
@@ -164,7 +228,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);margin:
       </div>
 
       <div class="mcard">
-        <div class="mcard-head"><div class="mcard-name">eView Connect (L2H1)</div><div class="mcard-type">Long-body electric van</div></div>
+        <div class="mcard-head"><div class="mcard-name">eView Connect 5.2m (L2)</div><div class="mcard-type">Long-body electric van</div></div>
         <div class="mcard-body">
           <span class="rebate-pill">✓ CVES Band A</span>
           <div class="price-row"><span class="price-before">$57,500</span><span class="price-after">$42,500</span></div>
@@ -280,5 +344,48 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);margin:
   </section>
 
 </div>
+<footer class="sgc-footer">
+  <div class="sgc-foot-inner">
+    <div class="sgc-foot-top">
+      <div>
+        <div class="sgc-foot-logo">Sg<span>CV</span>hub</div>
+        <p class="sgc-foot-tagline">Your Goldbell Group sales contact for Foton, Mitsubishi Fuso &amp; Opel commercial vehicles.</p>
+        <div class="sgc-foot-address">8 Tuas Ave 18, Singapore 638892</div>
+        <div class="sgc-foot-contact-line">
+          <a href="mailto:ask@sgcvhub.com">ask@sgcvhub.com</a><span class="dot">·</span><a href="tel:88225335">+65 8822 5335</a>
+        </div>
+      </div>
+      <div>
+        <div class="sgc-foot-col-title">Site</div>
+        <ul class="sgc-foot-links">
+          <li><a href="/">Home</a></li><li><a href="/brands">Brands</a></li>
+          <li><a href="/leasing">Leasing</a></li>
+          <li><a href="/customisation">Customisation</a></li><li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="sgc-foot-col-title">Resources</div>
+        <ul class="sgc-foot-links">
+          <li><a href="/blog">Blog</a></li><li><a href="/brochure">Request Brochure</a></li>
+          <li><a href="/blog/coe-guide">COE Guide</a></li><li><a href="/financing">Financing</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="sgc-foot-col-title">Brands</div>
+        <ul class="sgc-foot-links">
+          <li><a href="/brands/foton">Foton</a></li>
+          <li><a href="/brands/fuso">Mitsubishi Fuso</a></li>
+          <li><a href="/brands/opel">Opel</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="sgc-foot-bottom">
+      <span class="foot-copy">&copy; 2026 SgCVhub. All rights reserved.</span>
+      <div class="sgc-foot-legal"><a href="/privacy">Privacy Policy</a><a href="/terms">Terms</a></div>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>
