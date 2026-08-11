@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leasing | SgCVhub — Commercial Vehicle Leasing in Singapore</title>
+<meta name="description" content="Short and long-term leasing for Foton, Mitsubishi Fuso, and Opel commercial vehicles. New vehicle leases from 3 years; used vehicle leases available daily, weekly, or monthly.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --primary:#0F3741; --primary-d:#091f26; --primary-l:#1a4f5e;
+  --accent:#39BA2E; --accent-text:#2F9E26; --accent-muted:#6CAB64; --accent-pale:rgba(57,186,46,.08);
+  --bg:#FFFFFF; --mist:#F1F6F3; --card:#F4F9F6; --border:#E0ECE6; --border-hover:#C7DBD2;
+  --text:#3A4E52; --muted:#7D8C8A; --on-dark:#A9C2C4;
+  --font-head:'Outfit',sans-serif; --font-body:'Work Sans',sans-serif;
+  --r-sm:6px;--r-md:8px;--r-lg:14px;--r-xl:20px;--r-pill:999px;
+  --sh1:0 1px 3px rgba(15,55,65,.06);--sh2:0 4px 12px rgba(15,55,65,.09);--sh3:0 10px 30px rgba(15,55,65,.13);
+}
+*{box-sizing:border-box;}
+body{font-family:var(--font-body);background:var(--bg);color:var(--text);margin:0;line-height:1.6;}
+
+/* ── shared site chrome ── */
+.sgc-wa-fab{position:fixed;bottom:28px;right:24px;z-index:500;}
+.sgc-wa-btn{width:56px;height:56px;background:#25D366;border-radius:999px;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(37,211,102,.40);cursor:pointer;text-decoration:none;transition:transform 160ms,filter 160ms;}
+.sgc-wa-btn:hover{transform:scale(1.08);filter:brightness(1.05);}
+.sgc-wa-btn svg{width:28px;height:28px;fill:#fff;}
+.sgc-nav{background:#0F3741;position:sticky;top:0;z-index:200;box-shadow:0 2px 16px rgba(15,55,65,.22);}
+.sgc-nav-inner{max-width:1140px;margin:0 auto;padding:0 24px;display:flex;align-items:center;height:68px;gap:4px;font-family:'Outfit',sans-serif;}
+.sgc-logo{font-family:'Outfit',sans-serif;font-size:23px;font-weight:900;color:#fff;text-decoration:none;letter-spacing:-.6px;margin-right:auto;display:flex;align-items:center;gap:2px;}
+.sgc-logo span{color:#39BA2E;}
+.sgc-logo sup{font-size:11px;font-weight:600;color:#A9C2C4;letter-spacing:.5px;margin-left:1px;vertical-align:super;}
+.sgc-nav-links{display:flex;align-items:center;gap:2px;list-style:none;margin:0;padding:0;}
+.sgc-nav-links a{font-family:'Work Sans',sans-serif;font-size:15.5px;font-weight:500;color:#A9C2C4;text-decoration:none;padding:6px 11px;border-radius:8px;transition:color 120ms,background 120ms;}
+.sgc-nav-links a:hover,.sgc-nav-links a.active{color:#fff;background:rgba(255,255,255,.08);}
+.sgc-nav-wa{background:#25D366;color:#fff;font-family:'Work Sans',sans-serif;font-weight:700;font-size:15px;padding:7px 14px;border-radius:999px;border:none;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:5px;box-shadow:0 4px 12px rgba(37,211,102,.35);transition:filter 150ms,transform 150ms;white-space:nowrap;margin-left:6px;}
+.sgc-nav-wa:hover{filter:brightness(1.06);transform:translateY(-1px);}
+.sgc-footer{background:#0F3741;border-top:1px solid rgba(255,255,255,.07);padding:48px 24px 28px;font-family:'Work Sans',sans-serif;}
+.sgc-foot-inner{max-width:1140px;margin:0 auto;}
+.sgc-foot-top{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:32px;padding-bottom:32px;}
+@media(max-width:760px){.sgc-foot-top{grid-template-columns:1fr 1fr;}}
+.sgc-foot-logo{font-family:'Outfit',sans-serif;font-size:21.5px;font-weight:900;color:#fff;margin-bottom:10px;}
+.sgc-foot-logo span{color:#39BA2E;}
+.sgc-foot-tagline{font-size:15px;color:#A9C2C4;line-height:1.6;margin-bottom:14px;max-width:260px;}
+.sgc-foot-address{font-size:15px;color:#A9C2C4;margin-bottom:6px;}
+.sgc-foot-contact-line{display:flex;align-items:center;flex-wrap:wrap;gap:6px;font-size:15px;color:#A9C2C4;margin-bottom:14px;}
+.sgc-foot-contact-line a{color:#A9C2C4;text-decoration:none;white-space:nowrap;}
+.sgc-foot-contact-line a:hover{color:#fff;}
+.sgc-foot-contact-line .dot{color:rgba(169,194,196,.5);}
+.sgc-foot-col-title{font-family:'Outfit',sans-serif;font-size:14.5px;font-weight:800;text-transform:uppercase;letter-spacing:.5px;color:#fff;margin-bottom:12px;}
+.sgc-foot-links{list-style:none;margin:0;padding:0;}
+.sgc-foot-links li{margin-bottom:9px;}
+.sgc-foot-links a{font-size:15px;color:#A9C2C4;text-decoration:none;}
+.sgc-foot-links a:hover{color:#fff;}
+.sgc-foot-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:14px;color:#A9C2C4;}
+.sgc-foot-legal a{color:#A9C2C4;text-decoration:none;margin-left:16px;}
+.sgc-foot-legal a:hover{color:#fff;}
+
+/* ── hero ── */
+.lease-hero{background:var(--primary);padding:56px 24px 48px;position:relative;overflow:hidden;}
+.lease-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 75% 20%, rgba(57,186,46,.13) 0%, transparent 55%);}
+.lease-hero-inner{max-width:760px;margin:0 auto;position:relative;z-index:1;}
+.lease-eyebrow{font-size:11px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--accent-muted);margin-bottom:14px;display:flex;align-items:center;gap:8px;}
+.lease-eyebrow::before{content:'';display:inline-block;width:28px;height:2px;background:var(--accent);}
+.lease-h1{font-family:var(--font-head);font-size:clamp(30px,4.4vw,46px);font-weight:900;color:#fff;line-height:1.14;margin-bottom:14px;letter-spacing:-.5px;}
+.lease-sub{font-size:16px;color:var(--on-dark);line-height:1.7;max-width:600px;}
+
+/* ── page ── */
+.wrap{max-width:1140px;margin:0 auto;padding:56px 24px 24px;}
+.sec-eyebrow{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--accent-muted);margin-bottom:10px;}
+.sec-h2{font-family:var(--font-head);font-size:clamp(24px,3.4vw,32px);font-weight:800;color:var(--primary);margin:0 0 12px;line-height:1.25;}
+.sec-intro{font-size:15.5px;color:var(--muted);max-width:640px;line-height:1.65;margin-bottom:40px;}
+
+.term-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-bottom:56px;}
+@media(max-width:760px){.term-grid{grid-template-columns:1fr;}}
+.term-card{border:1px solid var(--border);border-radius:var(--r-xl);background:var(--bg);box-shadow:var(--sh1);padding:30px 28px;transition:box-shadow 160ms,transform 160ms,border-color 160ms;}
+.term-card:hover{box-shadow:var(--sh3);transform:translateY(-2px);border-color:var(--border-hover);}
+.term-icon{width:46px;height:46px;border-radius:var(--r-md);background:var(--accent-pale);display:flex;align-items:center;justify-content:center;margin-bottom:18px;}
+.term-icon svg{width:24px;height:24px;stroke:var(--accent-text);stroke-width:1.8;}
+.term-tag{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--accent-text);background:var(--accent-pale);padding:4px 10px;border-radius:var(--r-pill);margin-bottom:14px;}
+.term-title{font-family:var(--font-head);font-size:20px;font-weight:800;color:var(--primary);margin-bottom:10px;}
+.term-period{font-family:var(--font-head);font-size:15px;font-weight:700;color:var(--primary);margin-bottom:14px;}
+.term-desc{font-size:14.5px;color:var(--text);line-height:1.7;margin-bottom:18px;}
+.term-list{list-style:none;padding:0;margin:0;}
+.term-list li{display:flex;align-items:flex-start;gap:9px;font-size:13.5px;color:var(--text);padding:7px 0;border-top:1px solid var(--border);}
+.term-list li:first-child{border-top:none;}
+.term-list svg{width:15px;height:15px;stroke:var(--accent-muted);stroke-width:2.4;flex-shrink:0;margin-top:2px;}
+
+.brands-note{background:var(--mist);border:1px solid var(--border);border-radius:var(--r-lg);padding:18px 22px;margin-bottom:56px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
+.brands-note svg{width:22px;height:22px;stroke:var(--primary);stroke-width:1.8;flex-shrink:0;}
+.brands-note p{font-size:14px;color:var(--text);}
+.brands-note strong{color:var(--primary);}
+
+.cta-band{background:var(--primary);border-radius:var(--r-xl);padding:44px 36px;text-align:center;position:relative;overflow:hidden;margin-bottom:64px;}
+.cta-band::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(57,186,46,.10) 0%,transparent 60%);pointer-events:none;}
+.cta-inner{max-width:520px;margin:0 auto;position:relative;z-index:1;}
+.cta-h2{font-family:var(--font-head);font-size:clamp(22px,3vw,30px);font-weight:900;color:#fff;line-height:1.2;margin-bottom:10px;letter-spacing:-.3px;}
+.cta-p{font-size:14.5px;color:var(--on-dark);margin-bottom:26px;line-height:1.65;}
+.cta-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;}
+.btn-cta-wa{background:#25D366;color:#fff;font-family:var(--font-body);font-weight:700;font-size:15px;padding:13px 26px;border-radius:var(--r-pill);text-decoration:none;display:inline-flex;align-items:center;gap:8px;box-shadow:0 6px 20px rgba(37,211,102,.40);transition:filter 150ms,transform 150ms;}
+.btn-cta-wa:hover{filter:brightness(1.06);transform:translateY(-2px);}
+.btn-cta-ghost{background:rgba(255,255,255,.08);color:#fff;font-family:var(--font-body);font-weight:600;font-size:15px;padding:13px 26px;border-radius:var(--r-pill);border:1.5px solid rgba(255,255,255,.22);text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:background 150ms,border-color 150ms;}
+.btn-cta-ghost:hover{background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.35);}
+
+@media(max-width:600px){
+  .lease-hero{padding:40px 16px 32px;}
+  .wrap{padding:40px 16px 16px;}
+  .term-card{padding:24px 20px;}
+  .cta-band{padding:32px 22px;}
+}
+</style>
+</head>
+<body>
+
+<div class="sgc-wa-fab">
+  <a href="https://api.whatsapp.com/send?phone=6588225335" class="sgc-wa-btn" target="_blank" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 3C8.82 3 3 8.82 3 16c0 2.32.63 4.5 1.73 6.38L3 29l6.8-1.7A12.92 12.92 0 0016 29c7.18 0 13-5.82 13-13S23.18 3 16 3zm-3.28 7.44c-.21 0-.55.08-.84.39-.29.31-1.1 1.07-1.1 2.61s1.13 3.03 1.29 3.24c.16.21 2.19 3.47 5.38 4.73.75.32 1.34.51 1.79.65.75.23 1.43.2 1.97.12.6-.09 1.85-.76 2.11-1.49.26-.73.26-1.35.18-1.49-.08-.13-.29-.21-.6-.37-.31-.16-1.85-.91-2.14-1.01-.29-.1-.5-.16-.71.16-.21.31-.81 1.01-.99 1.22-.18.21-.37.24-.68.08-.31-.16-1.3-.48-2.47-1.53-.91-.81-1.53-1.82-1.71-2.13-.18-.31-.02-.48.13-.63.14-.14.31-.37.47-.55.16-.18.21-.31.31-.52.1-.21.05-.39-.03-.55-.08-.16-.71-1.71-.97-2.34-.26-.63-.52-.54-.71-.54z"/></svg>
+  </a>
+</div>
+
+<nav class="sgc-nav">
+  <div class="sgc-nav-inner">
+    <a href="/" class="sgc-logo">Sg<span>CV</span>hub<sup>SG</sup></a>
+    <ul class="sgc-nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/brands">Brands</a></li>
+      <li><a href="/leasing" class="active">Leasing</a></li>
+      <li><a href="/customisation">Customisation</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+    <a href="https://api.whatsapp.com/send?phone=6588225335" class="sgc-nav-wa" target="_blank">
+      <svg width="14" height="14" viewBox="0 0 32 32" fill="currentColor"><path d="M16 3C8.82 3 3 8.82 3 16c0 2.32.63 4.5 1.73 6.38L3 29l6.8-1.7A12.92 12.92 0 0016 29c7.18 0 13-5.82 13-13S23.18 3 16 3zm-3.28 7.44c-.21 0-.55.08-.84.39-.29.31-1.1 1.07-1.1 2.61s1.13 3.03 1.29 3.24c.16.21 2.19 3.47 5.38 4.73.75.32 1.34.51 1.79.65.75.23 1.43.2 1.97.12.6-.09 1.85-.76 2.11-1.49.26-.73.26-1.35.18-1.49-.08-.13-.29-.21-.6-.37-.31-.16-1.85-.91-2.14-1.01-.29-.1-.5-.16-.71.16-.21.31-.81 1.01-.99 1.22-.18.21-.37.24-.68.08-.31-.16-1.3-.48-2.47-1.53-.91-.81-1.53-1.82-1.71-2.13-.18-.31-.02-.48.13-.63.14-.14.31-.37.47-.55.16-.18.21-.31.31-.52.1-.21.05-.39-.03-.55-.08-.16-.71-1.71-.97-2.34-.26-.63-.52-.54-.71-.54z"/></svg>
+      WhatsApp Us
+    </a>
+  </div>
+</nav>
+
+<div class="lease-hero">
+  <div class="lease-hero-inner">
+    <p class="lease-eyebrow">SgCVhub — Leasing</p>
+    <h1 class="lease-h1">Flexible leasing for every stage of your business</h1>
+    <p class="lease-sub">Not ready to commit to a purchase? We offer short and long-term leasing on Foton, Mitsubishi Fuso, and Opel commercial vehicles — with terms structured around whether you need a new or used vehicle.</p>
+  </div>
+</div>
+
+<div class="wrap">
+  <p class="sec-eyebrow">Leasing Options</p>
+  <h2 class="sec-h2">Two ways to lease, depending on your needs</h2>
+  <p class="sec-intro">The right term depends on whether you're leasing a new or used vehicle. Here's how each works.</p>
+
+  <div class="term-grid">
+    <div class="term-card">
+      <div class="term-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+      </div>
+      <span class="term-tag">New Vehicles</span>
+      <div class="term-title">Long-Term Lease</div>
+      <div class="term-period">Preferred term: 3 years</div>
+      <p class="term-desc">For businesses that want a new diesel or electric commercial vehicle without the upfront capital outlay of a purchase. A 3-year term is our preferred structure for new vehicles, giving you a predictable monthly cost over a period that matches typical fleet planning cycles.</p>
+      <ul class="term-list">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>Available on new diesel or EV models</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>Fixed monthly cost for easier budgeting</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>Suited to fleet operators and growing businesses</li>
+      </ul>
+    </div>
+
+    <div class="term-card">
+      <div class="term-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      </div>
+      <span class="term-tag">Used Vehicles</span>
+      <div class="term-title">Short-Term Lease</div>
+      <div class="term-period">Daily, weekly, or monthly</div>
+      <p class="term-desc">For businesses that need a vehicle for a defined period — a project, a seasonal peak, or covering a vehicle that's temporarily out of service. Mainly available on used diesel vehicles, with some used EV units also available depending on stock.</p>
+      <ul class="term-list">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>Mainly used diesel, with select used EV units</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>Flexible terms to match short-notice needs</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>No long-term commitment required</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="brands-note">
+    <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="7" width="15" height="13" rx="1"/><path d="M16 10h3l4 4v6h-7"/><circle cx="6" cy="20" r="2"/><circle cx="18" cy="20" r="2"/></svg>
+    <p>Leasing is available across our full range — <strong>Foton</strong>, <strong>Mitsubishi Fuso</strong>, and <strong>Opel</strong> — subject to current stock and vehicle condition.</p>
+  </div>
+
+  <div class="cta-band">
+    <div class="cta-inner">
+      <h2 class="cta-h2">Ready to explore leasing?</h2>
+      <p class="cta-p">Fill in our enquiry form with your preferred term and fleet size, or message us directly on WhatsApp — we'll get back to you within the hour.</p>
+      <div class="cta-actions">
+        <a href="/contact?enquiry=leasing" class="btn-cta-wa" style="background:var(--accent);color:#08251C;box-shadow:var(--sh2);">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22 6 12 13 2 6"/></svg>
+          Fill in Leasing Enquiry
+        </a>
+        <a href="https://api.whatsapp.com/send?phone=6588225335" class="btn-cta-wa" target="_blank">
+          <svg width="16" height="16" viewBox="0 0 32 32" fill="currentColor"><path d="M16 3C8.82 3 3 8.82 3 16c0 2.32.63 4.5 1.73 6.38L3 29l6.8-1.7A12.92 12.92 0 0016 29c7.18 0 13-5.82 13-13S23.18 3 16 3zm-3.28 7.44c-.21 0-.55.08-.84.39-.29.31-1.1 1.07-1.1 2.61s1.13 3.03 1.29 3.24c.16.21 2.19 3.47 5.38 4.73.75.32 1.34.51 1.79.65.75.23 1.43.2 1.97.12.6-.09 1.85-.76 2.11-1.49.26-.73.26-1.35.18-1.49-.08-.13-.29-.21-.6-.37-.31-.16-1.85-.91-2.14-1.01-.29-.1-.5-.16-.71.16-.21.31-.81 1.01-.99 1.22-.18.21-.37.24-.68.08-.31-.16-1.3-.48-2.47-1.53-.91-.81-1.53-1.82-1.71-2.13-.18-.31-.02-.48.13-.63.14-.14.31-.37.47-.55.16-.18.21-.31.31-.52.1-.21.05-.39-.03-.55-.08-.16-.71-1.71-.97-2.34-.26-.63-.52-.54-.71-.54z"/></svg>
+          WhatsApp Us
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="sgc-footer">
+  <div class="sgc-foot-inner">
+    <div class="sgc-foot-top">
+      <div>
+        <div class="sgc-foot-logo">Sg<span>CV</span>hub</div>
+        <p class="sgc-foot-tagline">Your Goldbell Group sales contact for Foton, Mitsubishi Fuso &amp; Opel commercial vehicles.</p>
+        <div class="sgc-foot-address">8 Tuas Ave 18, Singapore 638892</div>
+        <div class="sgc-foot-contact-line">
+          <a href="mailto:ask@sgcvhub.com">ask@sgcvhub.com</a><span class="dot">·</span><a href="tel:88225335">+65 8822 5335</a>
+        </div>
+      </div>
+      <div>
+        <div class="sgc-foot-col-title">Site</div>
+        <ul class="sgc-foot-links">
+          <li><a href="/">Home</a></li><li><a href="/brands">Brands</a></li>
+          <li><a href="/leasing">Leasing</a></li>
+          <li><a href="/customisation">Customisation</a></li><li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="sgc-foot-col-title">Resources</div>
+        <ul class="sgc-foot-links">
+          <li><a href="/blog">Blog</a></li><li><a href="/brochure">Request Brochure</a></li>
+          <li><a href="/blog/coe-guide">COE Guide</a></li><li><a href="/financing">Financing</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="sgc-foot-col-title">Brands</div>
+        <ul class="sgc-foot-links">
+          <li><a href="/brands/foton">Foton</a></li>
+          <li><a href="/brands/fuso">Mitsubishi Fuso</a></li>
+          <li><a href="/brands/opel">Opel</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="sgc-foot-bottom">
+      <span class="foot-copy">&copy; 2026 SgCVhub. All rights reserved.</span>
+      <div class="sgc-foot-legal"><a href="/privacy">Privacy Policy</a><a href="/terms">Terms</a></div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
