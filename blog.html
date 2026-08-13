@@ -26,7 +26,7 @@
   --sh1:0 1px 3px rgba(15,55,65,.06);--sh2:0 4px 12px rgba(15,55,65,.09);--sh3:0 10px 30px rgba(15,55,65,.13);
 }
 *{box-sizing:border-box;}
-body{font-family:var(--font-body);background:var(--bg);color:var(--text);margin:0;line-height:1.6;}
+html{overflow-x:hidden;}body{font-family:var(--font-body);background:var(--bg);color:var(--text);margin:0;line-height:1.6;overflow-x:hidden;}
 
 /* ── shared site chrome ── */
 .sgc-wa-fab{position:fixed;bottom:28px;right:24px;z-index:500;}
@@ -93,12 +93,12 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);margin:
 }
 
 @media(max-width:900px){
-  .sgc-nav-inner{gap:8px;}
-  .sgc-nav-links{flex:1 1 auto;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;justify-content:flex-start;}
-  .sgc-nav-links::-webkit-scrollbar{display:none;}
+  .sgc-nav-inner{gap:10px;flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;}
+  .sgc-nav-inner::-webkit-scrollbar{display:none;}
+  .sgc-logo{margin-right:0;flex-shrink:0;}
+  .sgc-nav-links{flex:none;overflow:visible;}
   .sgc-nav-links a{white-space:nowrap;flex:none;}
-  .sgc-nav-wa span.wa-label{display:none;}
-  .sgc-nav-wa{padding:9px;}
+  .sgc-nav-wa{display:none;}
 }
 </style>
 </head>
