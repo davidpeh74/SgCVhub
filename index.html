@@ -31,7 +31,7 @@
   --sh-wa:0 6px 20px rgba(37,211,102,.40);
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;}
+html{scroll-behavior:smooth;overflow-x:hidden;}
 body{font-family:var(--font-body);background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden;}
 
 /* ── STICKY WHATSAPP ── */
@@ -345,12 +345,16 @@ footer{background:var(--primary);border-top:1px solid rgba(255,255,255,.07);padd
 }
 
 @media(max-width:900px){
-  .nav-inner{gap:8px;}
-  .nav-links{flex:1 1 auto;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;justify-content:flex-start;}
-  .nav-links::-webkit-scrollbar{display:none;}
+  .nav-inner{gap:10px;flex-wrap:nowrap;overflow-x:auto;overflow-y:visible;-webkit-overflow-scrolling:touch;scrollbar-width:none;}
+  .nav-inner::-webkit-scrollbar{display:none;}
+  .logo{margin-right:0;flex-shrink:0;}
+  .nav-links{flex:none;overflow:visible;}
   .nav-links a{white-space:nowrap;flex:none;}
-  .nav-wa span.wa-label{display:none;}
-  .nav-wa{padding:9px;}
+  .nav-dd,.drop-btn{flex-shrink:0;}
+  .drop-btn{white-space:nowrap;}
+  .nav-wa{display:none;}
+  .btn-brochure{flex-shrink:0;white-space:nowrap;}
+  .brands-panel{position:absolute;top:calc(100% + 8px);left:0;right:auto;transform:none;width:min(88vw,380px);max-height:70vh;overflow-y:auto;}
 }
 </style>
 </head>
@@ -372,35 +376,35 @@ footer{background:var(--primary);border-top:1px solid rgba(255,255,255,.07);padd
     <a href="/" class="logo">Sg<span>CV</span>hub<sup>SG</sup></a>
     <ul class="nav-links">
       <li><a href="/" style="color:#fff;">Home</a></li>
+      <li class="nav-dd">
+        <button class="drop-btn" id="brandsBtn" aria-haspopup="true" aria-expanded="false" aria-controls="brandsPanel" onclick="toggleBrands()">
+          Brands
+          <svg width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,4 6,8 10,4"/></svg>
+        </button>
+        <div class="brands-panel" id="brandsPanel" role="menu">
+          <div class="bc"><div class="bc-head"><strong>Foton</strong><span>Van, Bus &amp; Truck</span></div>
+            <ul class="bc-list" role="none"><li class="grp">Van</li><li><a href="/brands/foton/van">Foton Van</a></li><hr><li class="grp">Bus</li>
+              <li><a href="/brands/foton/commuter">Commuter Series <span class="tag">Price on asking</span></a></li><hr><li class="grp">Truck</li>
+              <li><a href="/brands/foton/truck-11ft">11 ft <span class="tag">Truck</span></a></li>
+              <li><a href="/brands/foton/truck-14ft">14 ft <span class="tag">Truck</span></a></li>
+              <li><a href="/brands/foton/truck-20ft">20 ft <span class="tag">Truck</span></a></li>
+              <li><a href="/brands/foton/truck-24ft">24 ft <span class="tag">Truck</span></a></li></ul></div>
+          <div class="bc"><div class="bc-head"><strong>Mitsubishi Fuso</strong><span>Truck</span></div>
+            <ul class="bc-list" role="none"><li class="grp">By Body Length</li>
+              <li><a href="/brands/fuso/truck-10ft">10 ft <span class="tag">Truck</span></a></li>
+              <li><a href="/brands/fuso/truck-14ft">14 ft <span class="tag">Truck</span></a></li>
+              <li><a href="/brands/fuso/truck-24ft">24 ft <span class="tag">Truck</span></a></li></ul></div>
+          <div class="bc"><div class="bc-head"><strong>Opel</strong><span>Van &amp; Bus</span></div>
+            <ul class="bc-list" role="none"><li class="grp">Van</li><li><a href="/brands/opel/van">Opel Van</a></li><hr><li class="grp">Bus</li>
+              <li><a href="/brands/opel/vivaro-e-commuter">Vivaro-e Commuter <span class="tag">8-seat</span></a></li></ul></div>
+        </div>
+      </li>
       <li><a href="/customisation">Customisation</a></li>
       <li><a href="/leasing">Leasing</a></li>
       <li><a href="/about">About</a></li>
       <li><a href="/blog">Blog</a></li>
       <li><a href="/contact">Contact</a></li>
     </ul>
-    <div class="nav-dd">
-      <button class="drop-btn" id="brandsBtn" aria-haspopup="true" aria-expanded="false" aria-controls="brandsPanel" onclick="toggleBrands()">
-        Brands
-        <svg width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="2,4 6,8 10,4"/></svg>
-      </button>
-      <div class="brands-panel" id="brandsPanel" role="menu">
-        <div class="bc"><div class="bc-head"><strong>Foton</strong><span>Van, Bus &amp; Truck</span></div>
-          <ul class="bc-list" role="none"><li class="grp">Van</li><li><a href="/brands/foton/van">Foton Van</a></li><hr><li class="grp">Bus</li>
-            <li><a href="/brands/foton/commuter">Commuter Series <span class="tag">Price on asking</span></a></li><hr><li class="grp">Truck</li>
-            <li><a href="/brands/foton/truck-11ft">11 ft <span class="tag">Truck</span></a></li>
-            <li><a href="/brands/foton/truck-14ft">14 ft <span class="tag">Truck</span></a></li>
-            <li><a href="/brands/foton/truck-20ft">20 ft <span class="tag">Truck</span></a></li>
-            <li><a href="/brands/foton/truck-24ft">24 ft <span class="tag">Truck</span></a></li></ul></div>
-        <div class="bc"><div class="bc-head"><strong>Mitsubishi Fuso</strong><span>Truck</span></div>
-          <ul class="bc-list" role="none"><li class="grp">By Body Length</li>
-            <li><a href="/brands/fuso/truck-10ft">10 ft <span class="tag">Truck</span></a></li>
-            <li><a href="/brands/fuso/truck-14ft">14 ft <span class="tag">Truck</span></a></li>
-            <li><a href="/brands/fuso/truck-24ft">24 ft <span class="tag">Truck</span></a></li></ul></div>
-        <div class="bc"><div class="bc-head"><strong>Opel</strong><span>Van &amp; Bus</span></div>
-          <ul class="bc-list" role="none"><li class="grp">Van</li><li><a href="/brands/opel/van">Opel Van</a></li><hr><li class="grp">Bus</li>
-            <li><a href="/brands/opel/vivaro-e-commuter">Vivaro-e Commuter <span class="tag">8-seat</span></a></li></ul></div>
-      </div>
-    </div>
     <a href="https://api.whatsapp.com/send?phone=6588225335" class="nav-wa" target="_blank">
       <svg width="14" height="14" viewBox="0 0 32 32" fill="currentColor"><path d="M16 3C8.82 3 3 8.82 3 16c0 2.32.63 4.5 1.73 6.38L3 29l6.8-1.7A12.92 12.92 0 0016 29c7.18 0 13-5.82 13-13S23.18 3 16 3zm-3.28 7.44c-.21 0-.55.08-.84.39-.29.31-1.1 1.07-1.1 2.61s1.13 3.03 1.29 3.24c.16.21 2.19 3.47 5.38 4.73.75.32 1.34.51 1.79.65.75.23 1.43.2 1.97.12.6-.09 1.85-.76 2.11-1.49.26-.73.26-1.35.18-1.49-.08-.13-.29-.21-.6-.37-.31-.16-1.85-.91-2.14-1.01-.29-.1-.5-.16-.71.16-.21.31-.81 1.01-.99 1.22-.18.21-.37.24-.68.08-.31-.16-1.3-.48-2.47-1.53-.91-.81-1.53-1.82-1.71-2.13-.18-.31-.02-.48.13-.63.14-.14.31-.37.47-.55.16-.18.21-.31.31-.52.1-.21.05-.39-.03-.55-.08-.16-.71-1.71-.97-2.34-.26-.63-.52-.54-.71-.54z"/></svg>
       <span class="wa-label">WhatsApp Us</span>
@@ -808,7 +812,7 @@ footer{background:var(--primary);border-top:1px solid rgba(255,255,255,.07);padd
 
 <script>
 const btn=document.getElementById('brandsBtn'),panel=document.getElementById('brandsPanel'),overlay=document.getElementById('overlay');
-function toggleBrands(){const o=panel.classList.toggle('open');btn.setAttribute('aria-expanded',o);overlay.classList.toggle('active',o);}
+function toggleBrands(){if(window.innerWidth<=900){window.location.href='/brands';return;}const o=panel.classList.toggle('open');btn.setAttribute('aria-expanded',o);overlay.classList.toggle('active',o);}
 function closeBrands(){panel.classList.remove('open');btn.setAttribute('aria-expanded','false');overlay.classList.remove('active');}
 overlay.addEventListener('click',closeBrands);
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeBrands();});
