@@ -2,6 +2,30 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
-    { "source": "/brands", "destination": "/brands-overview.html" }
+    { "source": "/brands", "destination": "/brands-overview.html" },
+
+    { "source": "/brands/foton", "destination": "/brands-foton-landing.html" },
+    { "source": "/brands/foton/connect", "destination": "/brands-foton-connect.html" },
+    { "source": "/brands/foton/eaumark", "destination": "/brands-foton-eaumark.html" },
+    { "source": "/brands/foton/emiler", "destination": "/brands-foton-emiler.html" },
+    { "source": "/brands/foton/auman-d", "destination": "/brands-foton-auman-d.html" },
+    { "source": "/brands/foton/van", "destination": "/brands-foton-connect.html" },
+    { "source": "/brands/foton/truck-11ft", "destination": "/brands-foton-emiler.html" },
+    { "source": "/brands/foton/truck-14ft", "destination": "/brands-foton-landing.html" },
+    { "source": "/brands/foton/truck-20ft", "destination": "/brands-foton-landing.html" },
+    { "source": "/brands/foton/truck-24ft", "destination": "/brands-foton-landing.html" },
+    { "source": "/brands/foton/commuter", "destination": "/brands-foton-landing.html" },
+
+    { "source": "/brands/fuso", "destination": "/brands-mitsubishi-landing.html" },
+    { "source": "/brands/fuso/canter", "destination": "/brands-mitsubishi-landing.html" },
+    { "source": "/brands/fuso/truck-10ft", "destination": "/brands-mitsubishi-landing.html" },
+    { "source": "/brands/fuso/truck-14ft", "destination": "/brands-mitsubishi-landing.html" },
+    { "source": "/brands/fuso/truck-24ft", "destination": "/brands-mitsubishi-landing.html" },
+
+    { "source": "/brands/opel", "destination": "/brands-opel-landing.html" },
+    { "source": "/brands/opel/van", "destination": "/brands-opel-landing.html" },
+    { "source": "/brands/opel/combo-e", "destination": "/brands-opel-landing.html" },
+    { "source": "/brands/opel/vivaro-e", "destination": "/brands-opel-landing.html" },
+    { "source": "/brands/opel/vivaro-e-commuter", "destination": "/brands-opel-landing.html" }
   ]
 }
