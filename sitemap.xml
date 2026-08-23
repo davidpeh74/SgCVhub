@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://sgcvhub.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://sgcvhub.com/brands</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://sgcvhub.com/brands/foton</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://sgcvhub.com/brands/foton/connect</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://sgcvhub.com/brands/foton/eaumark</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://sgcvhub.com/brands/foton/emiler</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://sgcvhub.com/brands/foton/auman-d</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://sgcvhub.com/brands/fuso</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://sgcvhub.com/brands/opel</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://sgcvhub.com/leasing</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://sgcvhub.com/contact</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://sgcvhub.com/blog</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://sgcvhub.com/blog/coe-guide</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://sgcvhub.com/privacy</loc><changefreq>yearly</changefreq><priority>0.2</priority></url>
+  <url><loc>https://sgcvhub.com/terms</loc><changefreq>yearly</changefreq><priority>0.2</priority></url>
+</urlset>

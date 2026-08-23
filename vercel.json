@@ -89,7 +89,10 @@
     {
       "source": "/brands/opel/vivaro-e-commuter",
       "destination": "/brands-opel-landing"
+    },
+    {
+      "source": "/blog/coe-guide",
+      "destination": "/blog-coe-guide"
     }
   ]
 }
-
