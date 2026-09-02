@@ -93,6 +93,10 @@
     {
       "source": "/blog/coe-guide",
       "destination": "/blog-coe-guide"
+    },
+    {
+      "source": "/blog/hvzes-2026-revision",
+      "destination": "/blog-hvzes-2026-revision"
     }
   ]
 }
