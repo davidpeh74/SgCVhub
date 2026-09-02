@@ -42,22 +42,6 @@ html{overflow-x:hidden;}*{box-sizing:border-box;}body{font-family:var(--font-bod
 .promo-includes h3{font-family:var(--font-head);font-size:13px;color:var(--primary);margin:0 0 8px;}
 .disclaimer{font-size:14px;color:var(--muted);margin-top:20px;line-height:1.65;max-width:820px;}
 
-.hero-img-wrap{border-radius:var(--r-xl);overflow:hidden;box-shadow:var(--sh3);margin:20px 0 28px;background:var(--mist);}
-.hero-img-wrap img{width:100%;height:auto;display:block;aspect-ratio:16/9;object-fit:contain;background:var(--mist);}
-.hero-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:-16px 0 32px;}
-.hero-gallery img{width:100%;height:150px;object-fit:contain;background:var(--mist);border-radius:var(--r-md);border:1px solid var(--border);}
-@media(max-width:600px){.hero-gallery{grid-template-columns:1fr;}}
-
-.lightbox-trigger{cursor:pointer;transition:opacity 150ms;}
-.lightbox-trigger:hover{opacity:.9;}
-.lightbox-overlay{display:none;position:fixed;inset:0;background:rgba(15,20,20,.92);z-index:1000;align-items:center;justify-content:center;padding:20px;}
-.lightbox-overlay.active{display:flex;}
-.lightbox-overlay img{max-width:100%;max-height:85vh;border-radius:var(--r-lg);box-shadow:var(--sh3);object-fit:contain;}
-.lightbox-close{position:absolute;top:20px;right:20px;width:44px;height:44px;border-radius:999px;background:rgba(255,255,255,.14);border:none;color:#fff;font-size:22px;cursor:pointer;display:flex;align-items:center;justify-content:center;}
-.lightbox-nav{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:999px;background:rgba(255,255,255,.14);border:none;color:#fff;font-size:26px;cursor:pointer;display:flex;align-items:center;justify-content:center;}
-.lightbox-prev{left:16px;}.lightbox-next{right:16px;}
-@media(max-width:600px){.lightbox-close{top:12px;right:12px;}.lightbox-prev{left:8px;}.lightbox-next{right:8px;}}
-  
 @media(max-width:900px){
   .sgc-nav-inner{gap:10px;flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;}
   .sgc-nav-inner::-webkit-scrollbar{display:none;}
@@ -135,16 +119,7 @@ html{overflow-x:hidden;}*{box-sizing:border-box;}body{font-family:var(--font-bod
   <p class="crumb"><a href="/brands">Brands</a> / <a href="/brands/foton">Foton</a> / Connect</p>
   <h1 class="page-h1">Foton Connect</h1>
   <p class="page-sub">Fully electric panel van, available in two lengths. CVES Band A — qualifies for the full $15,000 rebate.</p>
-
-  <div class="hero-img-wrap">
-  <img src="/images/foton/connect-hero.jpg" alt="Foton Connect electric cargo van, front three-quarter view" loading="lazy" width="1200" height="675" class="lightbox-trigger" onclick="openLightbox(0)">
-</div>
-<div class="hero-gallery">
-  <img src="/images/foton/connect-front.jpg" alt="Foton Connect front view" loading="lazy" class="lightbox-trigger" onclick="openLightbox(1)">
-  <img src="/images/foton/connect-side.jpg" alt="Foton Connect side profile" loading="lazy" class="lightbox-trigger" onclick="openLightbox(2)">
-</div>
-
-  <div class="promo-flag">National Day promo till 31st Aug - limited to 30 units</div>
+  <div class="promo-flag">National Day promo till 8th Sept - limited to 30 units</div>
 
   <div class="model-grid">
     <div class="mcard">
@@ -230,19 +205,4 @@ html{overflow-x:hidden;}*{box-sizing:border-box;}body{font-family:var(--font-bod
   </div>
 </footer>
 
-<div class="lightbox-overlay" id="lightboxOverlay" onclick="if(event.target===this)closeLightbox()">
-  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
-  <button class="lightbox-nav lightbox-prev" onclick="lightboxNav(-1)">‹</button>
-  <img id="lightboxImg" src="" alt="">
-  <button class="lightbox-nav lightbox-next" onclick="lightboxNav(1)">›</button>
-</div>
-<script>
-const lbImages=["/images/foton/connect-hero.jpg","/images/foton/connect-front.jpg","/images/foton/connect-side.jpg"];
-let lbIndex=0;
-function openLightbox(i){lbIndex=i;document.getElementById('lightboxImg').src=lbImages[i];document.getElementById('lightboxOverlay').classList.add('active');document.body.style.overflow='hidden';}
-function closeLightbox(){document.getElementById('lightboxOverlay').classList.remove('active');document.body.style.overflow='';}
-function lightboxNav(dir){lbIndex=(lbIndex+dir+lbImages.length)%lbImages.length;document.getElementById('lightboxImg').src=lbImages[lbIndex];}
-document.addEventListener('keydown',function(e){if(!document.getElementById('lightboxOverlay').classList.contains('active'))return;if(e.key==='Escape')closeLightbox();if(e.key==='ArrowLeft')lightboxNav(-1);if(e.key==='ArrowRight')lightboxNav(1);});
-</script>  
-  
 </body></html>
