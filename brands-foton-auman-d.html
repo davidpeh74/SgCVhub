@@ -47,7 +47,8 @@ html{overflow-x:hidden;}*{box-sizing:border-box;}body{font-family:var(--font-bod
 .promo-flag{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:var(--amber);background:var(--amber-pale);border:1px solid rgba(184,134,11,.3);padding:6px 14px;border-radius:var(--r-md);margin-bottom:16px;line-height:1.5;max-width:320px;}
 .disclaimer{font-size:14px;color:var(--muted);margin-top:16px;line-height:1.65;max-width:820px;}
 .page-hero{margin:22px 0 32px;border-radius:var(--r-xl);overflow:hidden;box-shadow:var(--sh3);border:1px solid var(--border);background:var(--card);}
-.page-hero img{width:100%;height:auto;max-height:440px;object-fit:cover;display:block;cursor:zoom-in;}
+.page-hero img{width:100%;height:auto;max-height:300px;object-fit:cover;display:block;cursor:zoom-in;}
+.page-hero{max-width:640px;}
 .page-hero-fallback{display:none;align-items:center;justify-content:center;height:280px;color:var(--muted);font-size:14px;gap:8px;}
 .page-hero-fallback svg{width:22px;height:22px;}
 .sgc-lightbox{display:none;position:fixed;inset:0;z-index:1000;background:rgba(9,31,38,.92);align-items:center;justify-content:center;padding:24px;}
@@ -55,8 +56,8 @@ html{overflow-x:hidden;}*{box-sizing:border-box;}body{font-family:var(--font-bod
 .sgc-lightbox img{max-width:100%;max-height:100%;border-radius:10px;box-shadow:0 20px 60px rgba(0,0,0,.4);cursor:default;}
 .sgc-lightbox-close{position:absolute;top:18px;right:22px;width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.12);color:#fff;border:none;font-size:22px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;}
 .sgc-lightbox-close:hover{background:rgba(255,255,255,.22);}
-@media(max-width:900px){.page-hero img{max-height:320px;}}
-@media(max-width:480px){.page-hero img{max-height:240px;}}
+@media(max-width:900px){.page-hero{max-width:100%;}.page-hero img{max-height:260px;}}
+@media(max-width:480px){.page-hero img{max-height:200px;}}
 
 @media(max-width:900px){
   .sgc-nav-inner{gap:10px;flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;}
