@@ -95,8 +95,16 @@
       "destination": "/blog-coe-guide"
     },
     {
-      "source": "/blog/hvzes-2026-revision",
-      "destination": "/blog-hvzes-2026-revision"
+      "source": "/blog/caged-lorry-ban",
+      "destination": "/blog-caged-lorry-ban"
+    },
+    {
+      "source": "/blog/speed-limiter-deadline",
+      "destination": "/blog-speed-limiter-deadline"
+    },
+    {
+      "source": "/blog/:slug",
+      "destination": "/blog-:slug"
     }
   ]
 }
