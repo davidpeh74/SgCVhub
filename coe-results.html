@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Latest COE Results for Commercial Vehicles (Category C) | SgCVhub</title>
+<meta name="description" content="Latest Category C COE results and PQP for commercial vehicles in Singapore, updated after every bidding round. Cat A, B, C and E premiums compared with the previous round.">
+<meta property="og:title" content="Latest COE Results for Commercial Vehicles in Singapore">
+<meta property="og:description" content="Latest Category C COE results and PQP for commercial vehicles in Singapore, updated after every bidding round. Cat A, B, C and E premiums compared with the previous round.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.sgcvhub.com/coe-results">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Latest COE Results for Commercial Vehicles in Singapore">
+<meta name="twitter:description" content="Latest Category C COE results and PQP for commercial vehicles in Singapore, updated after every bidding round. Cat A, B, C and E premiums compared with the previous round.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --primary:#0F3741; --primary-d:#091f26; --primary-l:#1a4f5e;
+  --accent:#39BA2E; --accent-text:#2F9E26; --accent-muted:#6CAB64; --accent-pale:rgba(57,186,46,.08);
+  --bg:#FFFFFF; --mist:#F1F6F3; --card:#F4F9F6; --border:#E0ECE6; --border-hover:#C7DBD2;
+  --text:#3A4E52; --muted:#7D8C8A; --on-dark:#A9C2C4;
+  --font-head:'Outfit',sans-serif; --font-body:'Work Sans',sans-serif;
+  --r-sm:6px;--r-md:8px;--r-lg:14px;--r-xl:20px;--r-pill:999px;
+  --sh1:0 1px 3px rgba(15,55,65,.06);--sh2:0 4px 12px rgba(15,55,65,.09);--sh3:0 10px 30px rgba(15,55,65,.13);
+}
+*{box-sizing:border-box;}
+html{overflow-x:hidden;}body{font-family:var(--font-body);background:var(--bg);color:var(--text);margin:0;line-height:1.6;overflow-x:hidden;}
+
+/* ── shared site chrome ── */
+.sgc-wa-fab{position:fixed;bottom:28px;right:24px;z-index:500;}
+.sgc-wa-btn{width:56px;height:56px;background:#25D366;border-radius:999px;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(37,211,102,.40);cursor:pointer;text-decoration:none;transition:transform 160ms,filter 160ms;}
+.sgc-wa-btn:hover{transform:scale(1.08);filter:brightness(1.05);}
+.sgc-wa-btn svg{width:28px;height:28px;fill:#fff;}
+.sgc-nav{background:#0F3741;position:sticky;top:0;z-index:200;box-shadow:0 2px 16px rgba(15,55,65,.22);}
+.sgc-nav-inner{max-width:1140px;margin:0 auto;padding:0 24px;display:flex;align-items:center;height:68px;gap:4px;font-family:'Outfit',sans-serif;}
+.sgc-logo{font-family:'Outfit',sans-serif;font-size:23px;font-weight:900;color:#fff;text-decoration:none;letter-spacing:-.6px;margin-right:auto;display:flex;align-items:center;gap:2px;}
+.sgc-logo span{color:#39BA2E;}
+.sgc-logo sup{font-size:11px;font-weight:600;color:#A9C2C4;letter-spacing:.5px;margin-left:1px;vertical-align:super;}
+.sgc-nav-links{display:flex;align-items:center;gap:2px;list-style:none;margin:0;padding:0;}
+.sgc-nav-links a{font-family:'Work Sans',sans-serif;font-size:15.5px;font-weight:500;color:#A9C2C4;text-decoration:none;padding:6px 11px;border-radius:8px;transition:color 120ms,background 120ms;}
+.sgc-nav-links a:hover,.sgc-nav-links a.active{color:#fff;background:rgba(255,255,255,.08);}
+.sgc-nav-wa{background:#25D366;color:#fff;font-family:'Work Sans',sans-serif;font-weight:700;font-size:15px;padding:7px 14px;border-radius:999px;border:none;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:5px;box-shadow:0 4px 12px rgba(37,211,102,.35);transition:filter 150ms,transform 150ms;white-space:nowrap;margin-left:6px;}
+.sgc-nav-wa:hover{filter:brightness(1.06);transform:translateY(-1px);}
+.sgc-footer{background:#0F3741;border-top:1px solid rgba(255,255,255,.07);padding:48px 24px 28px;font-family:'Work Sans',sans-serif;}
+.sgc-foot-inner{max-width:1140px;margin:0 auto;}
+.sgc-foot-top{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:32px;padding-bottom:32px;}
+@media(max-width:760px){.sgc-foot-top{grid-template-columns:1fr 1fr;}}
+.sgc-foot-logo{font-family:'Outfit',sans-serif;font-size:21.5px;font-weight:900;color:#fff;margin-bottom:10px;}
+.sgc-foot-logo span{color:#39BA2E;}
+.sgc-foot-tagline{font-size:15px;color:#A9C2C4;line-height:1.6;margin-bottom:14px;max-width:260px;}
+.sgc-foot-address{font-size:15px;color:#A9C2C4;margin-bottom:6px;}
+.sgc-foot-contact-line{display:flex;align-items:center;flex-wrap:wrap;gap:6px;font-size:15px;color:#A9C2C4;margin-bottom:14px;}
+.sgc-foot-contact-line a{color:#A9C2C4;text-decoration:none;white-space:nowrap;}
+.sgc-foot-contact-line a:hover{color:#fff;}
+.sgc-foot-contact-line .dot{color:rgba(169,194,196,.5);}
+.sgc-foot-col-title{font-family:'Outfit',sans-serif;font-size:14.5px;font-weight:800;text-transform:uppercase;letter-spacing:.5px;color:#fff;margin-bottom:12px;}
+.sgc-foot-links{list-style:none;margin:0;padding:0;}
+.sgc-foot-links li{margin-bottom:9px;}
+.sgc-foot-links a{font-size:15px;color:#A9C2C4;text-decoration:none;}
+.sgc-foot-links a:hover{color:#fff;}
+.sgc-foot-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:14px;color:#A9C2C4;}
+.sgc-foot-legal a{color:#A9C2C4;text-decoration:none;margin-left:16px;}
+.sgc-foot-legal a:hover{color:#fff;}
+
+/* ── article ── */
+.art-hero{background:var(--primary);padding:44px 24px 40px;}
+.art-hero-inner{max-width:760px;margin:0 auto;}
+.art-back{font-size:13px;font-weight:600;color:var(--on-dark);text-decoration:none;display:inline-flex;align-items:center;gap:6px;margin-bottom:20px;}
+.art-back:hover{color:#fff;}
+.art-cat{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:#08251C;background:var(--accent);padding:4px 10px;border-radius:var(--r-pill);margin-bottom:14px;}
+.art-h1{font-family:var(--font-head);font-size:clamp(28px,4vw,38px);font-weight:900;color:#fff;line-height:1.22;margin-bottom:14px;letter-spacing:-.4px;}
+.art-meta{font-size:13.5px;color:var(--on-dark);}
+
+.art-wrap{max-width:760px;margin:0 auto;padding:48px 24px 24px;}
+.art-body p{font-size:16px;color:var(--text);line-height:1.75;margin-bottom:20px;}
+.art-body h2{font-family:var(--font-head);font-size:22px;font-weight:800;color:var(--primary);margin:40px 0 14px;letter-spacing:-.2px;}
+.art-body h3{font-family:var(--font-head);font-size:17px;font-weight:700;color:var(--primary);margin:28px 0 10px;}
+.art-body ul,.art-body ol{margin:0 0 20px;padding-left:22px;}
+.art-body li{font-size:15.5px;color:var(--text);line-height:1.7;margin-bottom:8px;}
+.art-body a{color:var(--accent-text);font-weight:600;}
+.art-callout{background:var(--card);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:var(--r-md);padding:16px 20px;margin:28px 0;font-size:14.5px;color:var(--text);line-height:1.7;}
+.art-callout strong{color:var(--primary);}
+.art-cta{background:var(--mist);border:1px solid var(--border);border-radius:var(--r-xl);padding:28px 26px;margin:44px 0 8px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;}
+.art-cta-text h3{font-family:var(--font-head);font-size:17px;font-weight:800;color:var(--primary);margin:0 0 4px;}
+.art-cta-text p{font-size:13.5px;color:var(--muted);margin:0;}
+.btn-wa-art{flex-shrink:0;background:#25D366;color:#fff;font-family:var(--font-body);font-weight:700;font-size:14px;padding:11px 22px;border-radius:var(--r-pill);text-decoration:none;display:inline-flex;align-items:center;gap:7px;box-shadow:0 6px 18px rgba(37,211,102,.35);transition:filter 150ms,transform 150ms;}
+.btn-wa-art:hover{filter:brightness(1.06);transform:translateY(-2px);}
+.art-disclaimer{font-size:12px;color:var(--muted);line-height:1.6;margin-top:32px;padding-top:20px;border-top:1px solid var(--border);}
+.art-disclaimer a{color:var(--muted);}
+.tbl-wrap{overflow-x:auto;margin:0 0 24px;border:1px solid var(--border);border-radius:var(--r-md);}
+.tbl{width:100%;border-collapse:collapse;font-size:14.5px;}
+.tbl th{background:var(--mist);color:var(--primary);font-family:var(--font-head);font-weight:700;text-align:left;padding:10px 14px;font-size:13px;}
+.tbl td{padding:10px 14px;border-top:1px solid var(--border);color:var(--text);}
+.tbl td.num,.tbl th.num{text-align:right;white-space:nowrap;}
+.tbl .up{color:#B3261E;font-weight:600;}
+.tbl .down{color:#2F9E26;font-weight:600;}
+.tbl .hl td{background:var(--accent-pale);font-weight:600;}
+.tbl .past td{color:var(--muted);}
+@media(max-width:600px){
+  .tbl{font-size:13px;}
+  .tbl th{padding:9px 7px;font-size:12px;}
+  .tbl td{padding:9px 7px;}
+  .art-hero{padding:32px 16px 28px;}
+  .art-wrap{padding:32px 16px 16px;}
+  .art-cta{flex-direction:column;align-items:flex-start;}
+}
+
+@media(max-width:900px){
+  .sgc-nav-inner{gap:10px;flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;}
+  .sgc-nav-inner::-webkit-scrollbar{display:none;}
+  .sgc-logo{margin-right:0;flex-shrink:0;}
+  .sgc-nav-links{flex:none;overflow:visible;}
+  .sgc-nav-links a{white-space:nowrap;flex:none;}
+  .sgc-nav-wa{display:none;}
+}
+</style>
+</head>
+<body>
+
+<div class="sgc-wa-fab">
+  <a href="https://api.whatsapp.com/send?phone=6588225335" class="sgc-wa-btn" target="_blank" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 3C8.82 3 3 8.82 3 16c0 2.32.63 4.5 1.73 6.38L3 29l6.8-1.7A12.92 12.92 0 0016 29c7.18 0 13-5.82 13-13S23.18 3 16 3zm-3.28 7.44c-.21 0-.55.08-.84.39-.29.31-1.1 1.07-1.1 2.61s1.13 3.03 1.29 3.24c.16.21 2.19 3.47 5.38 4.73.75.32 1.34.51 1.79.65.75.23 1.43.2 1.97.12.6-.09 1.85-.76 2.11-1.49.26-.73.26-1.35.18-1.49-.08-.13-.29-.21-.6-.37-.31-.16-1.85-.91-2.14-1.01-.29-.1-.5-.16-.71.16-.21.31-.81 1.01-.99 1.22-.18.21-.37.24-.68.08-.31-.16-1.3-.48-2.47-1.53-.91-.81-1.53-1.82-1.71-2.13-.18-.31-.02-.48.13-.63.14-.14.31-.37.47-.55.16-.18.21-.31.31-.52.1-.21.05-.39-.03-.55-.08-.16-.71-1.71-.97-2.34-.26-.63-.52-.54-.71-.54z"/></svg>
+  </a>
+</div>
+
+<nav class="sgc-nav">
+  <div class="sgc-nav-inner">
+    <a href="/" class="sgc-logo">Sg<span>CV</span>hub<sup>SG</sup></a>
+    <ul class="sgc-nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/brands">Brands</a></li>
+      <li><a href="/leasing">Leasing</a></li>
+
+
+      <li><a href="/blog" class="active">Blog</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+    <a href="https://api.whatsapp.com/send?phone=6588225335" class="sgc-nav-wa" target="_blank">
+      <svg width="14" height="14" viewBox="0 0 32 32" fill="currentColor"><path d="M16 3C8.82 3 3 8.82 3 16c0 2.32.63 4.5 1.73 6.38L3 29l6.8-1.7A12.92 12.92 0 0016 29c7.18 0 13-5.82 13-13S23.18 3 16 3zm-3.28 7.44c-.21 0-.55.08-.84.39-.29.31-1.1 1.07-1.1 2.61s1.13 3.03 1.29 3.24c.16.21 2.19 3.47 5.38 4.73.75.32 1.34.51 1.79.65.75.23 1.43.2 1.97.12.6-.09 1.85-.76 2.11-1.49.26-.73.26-1.35.18-1.49-.08-.13-.29-.21-.6-.37-.31-.16-1.85-.91-2.14-1.01-.29-.1-.5-.16-.71.16-.21.31-.81 1.01-.99 1.22-.18.21-.37.24-.68.08-.31-.16-1.3-.48-2.47-1.53-.91-.81-1.53-1.82-1.71-2.13-.18-.31-.02-.48.13-.63.14-.14.31-.37.47-.55.16-.18.21-.31.31-.52.1-.21.05-.39-.03-.55-.08-.16-.71-1.71-.97-2.34-.26-.63-.52-.54-.71-.54z"/></svg>
+      <span class="wa-label">WhatsApp Us</span>
+    </a>
+  </div>
+</nav>
+
+<!-- ======================================================================
+  UPDATE AFTER EACH BIDDING ROUND (usually twice a month, results on Wednesday):
+  1. Change the "Last updated" line in the hero.
+  2. Move the old "latest" row values into the "previous round" table.
+  3. Type the new numbers into the "latest" table.
+  4. Update the "Next results" line.
+====================================================================== -->
+<div class="art-hero">
+  <div class="art-hero-inner">
+    <a href="/blog" class="art-back">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+      Back to Blog
+    </a>
+    <span class="art-cat">COE</span>
+    <h1 class="art-h1">Latest COE Results for Commercial Vehicles in Singapore</h1>
+    <p class="art-meta">Last updated: 4 Nov 2026 (1st bidding, November 2026) · Next results: Wed 18 Nov 2026</p>
+  </div>
+</div>
+
+<div class="art-wrap">
+  <div class="art-body">
+    <p>Commercial vehicles such as vans and lorries bid in <strong>Category C</strong>, which covers goods vehicles and buses. Category E is the open category and can be used for any vehicle except motorcycles. We update this page after every bidding exercise so you can see where premiums stand.</p>
+
+    <h2>Latest round: 1st bidding, November 2026</h2>
+    <div class="tbl-wrap">
+      <table class="tbl">
+        <thead><tr><th>Category</th><th class="num">Premium</th><th class="num">vs 21 Oct</th><th class="num">Bids</th><th class="num">Quota</th></tr></thead>
+        <tbody>
+          <tr class="hl"><td>Cat C</td><td class="num">$92,000</td><td class="num down">&#9660; $200</td><td class="num">451</td><td class="num">315</td></tr>
+          <tr><td>Cat A</td><td class="num">$139,001</td><td class="num up">&#9650; $6,997</td><td class="num">2,018</td><td class="num">1,189</td></tr>
+          <tr><td>Cat B</td><td class="num">$132,334</td><td class="num up">&#9650; $433</td><td class="num">1,163</td><td class="num">959</td></tr>
+          <tr><td>Cat E</td><td class="num">$135,998</td><td class="num up">&#9650; $208</td><td class="num">506</td><td class="num">287</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>PQP for COE renewal</h2>
+    <p>If you are renewing an existing vehicle's COE rather than buying a new vehicle, the Prevailing Quota Premium (PQP) applies. It is based on a rolling average of recent premiums, so it moves more gradually than a single bidding result.</p>
+    <div class="tbl-wrap">
+      <table class="tbl">
+        <thead><tr><th>Category</th><th class="num">PQP (Oct)</th><th class="num">PQP (Nov)</th></tr></thead>
+        <tbody>
+          <tr class="hl"><td>Cat C</td><td class="num">$92,614</td><td class="num">$91,814</td></tr>
+          <tr><td>Cat A</td><td class="num">$128,715</td><td class="num">$129,883</td></tr>
+          <tr><td>Cat B</td><td class="num">$131,616</td><td class="num">$131,819</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Previous round: 2nd bidding, October 2026 (21 Oct)</h2>
+    <div class="tbl-wrap">
+      <table class="tbl">
+        <thead><tr><th>Category</th><th class="num">Premium</th></tr></thead>
+        <tbody>
+          <tr class="past"><td>Cat C</td><td class="num">$92,200</td></tr>
+          <tr class="past"><td>Cat A</td><td class="num">$132,004</td></tr>
+          <tr class="past"><td>Cat B</td><td class="num">$131,901</td></tr>
+          <tr class="past"><td>Cat E</td><td class="num">$135,790</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Why Category C premiums are high</h2>
+    <p>In Parliament in August 2026, the Transport Minister linked rising Category C premiums to more electric heavy goods vehicles and electric buses being registered since the Heavy Vehicle Zero Emissions Scheme began in January 2026. He said electric heavy vehicles rose from under 1% of registrations in 2025 to over 30% in June 2026. Category C is the only category with a quota growth provision, at 0.25% a year. The quota for November 2026 to January 2027 is 1,873, up 37 from the previous quarter.</p>
+
+    <div class="art-callout">
+      <strong>What this means for you:</strong> COE is only one part of the cost. Premiums move every round, so the useful question is whether your business needs the vehicle now. Message us and we can go through current pricing, COE timing and any EV incentives for the model you have in mind. Read our <a href="/blog/coe-guide">COE timing guide</a> for how the bidding cycle works.
+    </div>
+
+    <div class="art-cta">
+      <div class="art-cta-text">
+        <h3>Planning a vehicle purchase or COE renewal?</h3>
+        <p>Message us your requirements and we'll go through the numbers with you.</p>
+      </div>
+      <a href="https://api.whatsapp.com/send?phone=6588225335" class="btn-wa-art" target="_blank">
+        <svg width="15" height="15" viewBox="0 0 32 32" fill="currentColor"><path d="M16 3C8.82 3 3 8.82 3 16c0 2.32.63 4.5 1.73 6.38L3 29l6.8-1.7A12.92 12.92 0 0016 29c7.18 0 13-5.82 13-13S23.18 3 16 3zm-3.28 7.44c-.21 0-.55.08-.84.39-.29.31-1.1 1.07-1.1 2.61s1.13 3.03 1.29 3.24c.16.21 2.19 3.47 5.38 4.73.75.32 1.34.51 1.79.65.75.23 1.43.2 1.97.12.6-.09 1.85-.76 2.11-1.49.26-.73.26-1.35.18-1.49-.08-.13-.29-.21-.6-.37-.31-.16-1.85-.91-2.14-1.01-.29-.1-.5-.16-.71.16-.21.31-.81 1.01-.99 1.22-.18.21-.37.24-.68.08-.31-.16-1.3-.48-2.47-1.53-.91-.81-1.53-1.82-1.71-2.13-.18-.31-.02-.48.13-.63.14-.14.31-.37.47-.55.16-.18.21-.31.31-.52.1-.21.05-.39-.03-.55-.08-.16-.71-1.71-.97-2.34-.26-.63-.52-.54-.71-.54z"/></svg>
+        WhatsApp Us
+      </a>
+    </div>
+
+    <p class="art-disclaimer">Figures are in Singapore dollars and are taken from the published bidding results for each exercise. Official results are published by LTA after each exercise; always confirm current figures before making a purchase decision. This page is general information and not financial advice. Other sources: <a href="https://www.mot.gov.sg/news-resources/newsroom/reviewing-category-c-coe-scheme-given-increasing-premiums/" target="_blank" rel="noopener">MOT, Reviewing Category C COE scheme (4 Aug 2026)</a>; <a href="https://theindependent.sg/singapore-coe-quota-rises-by-213-for-november-2026-to-january-2027-category-a-unchanged" target="_blank" rel="noopener">The Independent SG, COE quota for November 2026 to January 2027</a>.</p>
+  </div>
+</div>
+
+
+<footer class="sgc-footer">
+  <div class="sgc-foot-inner">
+    <div class="sgc-foot-top">
+      <div>
+        <div class="sgc-foot-logo">Sg<span>CV</span>hub</div>
+        <p class="sgc-foot-tagline">Your Goldbell Group sales contact for Foton, Mitsubishi Fuso &amp; Opel commercial vehicles.</p>
+        <div class="sgc-foot-address">8 Tuas Ave 18, Singapore 638892</div>
+        <div class="sgc-foot-contact-line">
+          <a href="mailto:ask@sgcvhub.com">ask@sgcvhub.com</a><span class="dot">·</span><a href="tel:88225335">+65 8822 5335</a>
+        </div>
+      </div>
+      <div>
+        <div class="sgc-foot-col-title">Site</div>
+        <ul class="sgc-foot-links">
+          <li><a href="/">Home</a></li><li><a href="/brands">Brands</a></li>
+          <li><a href="/leasing">Leasing</a></li>
+
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="sgc-foot-col-title">Resources</div>
+        <ul class="sgc-foot-links">
+          <li><a href="/blog">Blog</a></li><li><a href="/contact">Get in Touch</a></li>
+          <li><a href="/blog/coe-guide">COE Guide</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="sgc-foot-col-title">Brands</div>
+        <ul class="sgc-foot-links">
+          <li><a href="/brands/foton">Foton</a></li>
+          <li><a href="/brands/fuso">Mitsubishi Fuso</a></li>
+          <li><a href="/brands/opel">Opel</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="sgc-foot-bottom">
+      <span class="foot-copy">&copy; 2026 SgCVhub. All rights reserved.</span>
+      <div class="sgc-foot-legal"><a href="/privacy">Privacy Policy</a><a href="/terms">Terms</a></div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
