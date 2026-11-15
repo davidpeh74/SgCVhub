@@ -60,7 +60,8 @@ html{overflow-x:hidden;}*{box-sizing:border-box;}body{font-family:var(--font-bod
 .sgc-lightbox-close:hover{background:rgba(255,255,255,.22);}
 
 /* ── eView Connect spec box ── */
-.spec-box{border:1.5px solid rgba(57,186,46,.3);border-radius:var(--r-xl);box-shadow:var(--sh1);overflow:hidden;margin:18px 0;}
+html{scroll-behavior:smooth;}
+.spec-box{scroll-margin-top:84px;border:1.5px solid rgba(57,186,46,.3);border-radius:var(--r-xl);box-shadow:var(--sh1);overflow:hidden;margin:18px 0;}
 .spec-box-head{background:linear-gradient(135deg,var(--primary),#123f4a);padding:16px 18px;font-family:var(--font-head);font-weight:800;font-size:17px;color:#fff;}
 .spec-table{width:100%;border-collapse:collapse;font-size:14.5px;}
 .spec-table th{font-family:var(--font-head);font-size:14px;color:var(--primary);text-align:left;padding:10px 18px;background:var(--mist);border-bottom:1px solid var(--border);}
@@ -188,7 +189,7 @@ html{overflow-x:hidden;}*{box-sizing:border-box;}body{font-family:var(--font-bod
           <li><span class="k">Drive motor warranty</span><span class="v">5 yrs / 200,000 km</span></li>
           <li><span class="k">Battery warranty</span><span class="v">10 yrs / 400,000 km, SOH 70%</span></li>
         </ul>
-        <div class="mcard-foot"><a href="/contact" class="btn-outline">Full specs</a><a href="/contact" class="btn-solid">Enquire</a></div>
+        <div class="mcard-foot"><a href="#specs" class="btn-outline">See specs</a><a href="/contact" class="btn-solid">Enquire</a></div>
       </div>
     </div>
 
@@ -204,13 +205,13 @@ html{overflow-x:hidden;}*{box-sizing:border-box;}body{font-family:var(--font-bod
           <li><span class="k">Drive motor warranty</span><span class="v">5 yrs / 200,000 km</span></li>
           <li><span class="k">Battery warranty</span><span class="v">10 yrs / 400,000 km, SOH 70%</span></li>
         </ul>
-        <div class="mcard-foot"><a href="/contact" class="btn-outline">Full specs</a><a href="/contact" class="btn-solid">Enquire</a></div>
+        <div class="mcard-foot"><a href="#specs" class="btn-outline">See specs</a><a href="/contact" class="btn-solid">Enquire</a></div>
       </div>
     </div>
   </div>
 
   <!-- SPEC BOX START -->
-  <div class="spec-box">
+  <div class="spec-box" id="specs">
     <div class="spec-box-head">eView Connect at a glance</div>
     <table class="spec-table">
       <tr><th>Specification</th><th>L1</th><th>L2</th></tr>
