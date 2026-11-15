@@ -11,7 +11,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;800;900&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--primary:#0F3741;--accent:#39BA2E;--accent-text:#2F9E26;--accent-pale:rgba(57,186,46,.08);--bg:#FFFFFF;--mist:#F1F6F3;--card:#F4F9F6;--border:#E0ECE6;--text:#3A4E52;--muted:#7D8C8A;--on-dark:#A9C2C4;--amber:#B8860B;--amber-pale:rgba(184,134,11,.10);--font-head:'Outfit',sans-serif;--font-body:'Work Sans',sans-serif;--r-md:8px;--r-lg:14px;--r-xl:20px;--r-pill:999px;--sh1:0 1px 3px rgba(15,55,65,.06);}
+:root{--primary:#0F3741;--accent:#39BA2E;--accent-text:#2F9E26;--accent-pale:rgba(57,186,46,.08);--bg:#FFFFFF;--mist:#F1F6F3;--border:#E0ECE6;--text:#3A4E52;--muted:#7D8C8A;--on-dark:#A9C2C4;--amber:#B8860B;--amber-pale:rgba(184,134,11,.10);--font-head:'Outfit',sans-serif;--font-body:'Work Sans',sans-serif;--r-md:8px;--r-lg:14px;--r-xl:20px;--r-pill:999px;--sh1:0 1px 3px rgba(15,55,65,.06);}
 html{overflow-x:hidden;}*{box-sizing:border-box;}body{font-family:var(--font-body);background:var(--bg);color:var(--text);margin:0;line-height:1.6;overflow-x:hidden;}
 .wrap{max-width:1180px;margin:0 auto;padding:56px 24px;}
 .crumb{font-size:12.5px;color:var(--muted);margin-bottom:18px;}.crumb a{color:var(--muted);text-decoration:none;}
@@ -29,6 +29,7 @@ html{overflow-x:hidden;}*{box-sizing:border-box;}body{font-family:var(--font-bod
 .price-after{font-family:var(--font-head);font-weight:900;font-size:26px;color:var(--accent-text);}
 .price-note{font-size:14.5px;color:var(--muted);margin-bottom:6px;}
 .topup-note{font-size:13.5px;color:var(--muted);margin-bottom:14px;}
+.topup-note::before{content:"";}
 .rebate-pill{display:inline-flex;align-items:center;gap:5px;font-size:13.5px;font-weight:700;color:var(--accent-text);background:var(--accent-pale);border:1px solid rgba(57,186,46,.22);padding:4px 12px;border-radius:var(--r-pill);margin-bottom:12px;}
 .spec-list{list-style:none;padding:0;margin:0 0 14px;font-size:12.5px;}
 .spec-list li{display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid var(--border);}
@@ -57,6 +58,23 @@ html{overflow-x:hidden;}*{box-sizing:border-box;}body{font-family:var(--font-bod
 .sgc-lightbox img{max-width:100%;max-height:100%;border-radius:10px;box-shadow:0 20px 60px rgba(0,0,0,.4);cursor:default;}
 .sgc-lightbox-close{position:absolute;top:18px;right:22px;width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.12);color:#fff;border:none;font-size:22px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;}
 .sgc-lightbox-close:hover{background:rgba(255,255,255,.22);}
+
+/* ── eView Connect spec box ── */
+.spec-box{border:1.5px solid rgba(57,186,46,.3);border-radius:var(--r-xl);box-shadow:var(--sh1);overflow:hidden;margin:18px 0;}
+.spec-box-head{background:linear-gradient(135deg,var(--primary),#123f4a);padding:16px 18px;font-family:var(--font-head);font-weight:800;font-size:17px;color:#fff;}
+.spec-table{width:100%;border-collapse:collapse;font-size:14.5px;}
+.spec-table th{font-family:var(--font-head);font-size:14px;color:var(--primary);text-align:left;padding:10px 18px;background:var(--mist);border-bottom:1px solid var(--border);}
+.spec-table th:not(:first-child),.spec-table td:not(:first-child){text-align:right;}
+.spec-table td{padding:9px 18px;border-bottom:1px solid var(--border);}
+.spec-table td:first-child{color:var(--muted);}
+.spec-table td:not(:first-child){font-weight:600;color:var(--primary);}
+.spec-table tr:last-child td{border-bottom:none;}
+.safety{background:var(--mist);border-top:1px solid var(--border);padding:16px 18px;}
+.safety h3{font-family:var(--font-head);font-size:14px;color:var(--primary);margin:0 0 8px;}
+.safety ul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;font-size:14px;}
+.safety li::before{content:"\2713\00a0";color:var(--accent-text);font-weight:700;}
+.spec-foot{font-size:12.5px;color:var(--muted);padding:10px 18px 14px;}
+@media(max-width:520px){.safety ul{grid-template-columns:1fr;}}
 
 @media(max-width:900px){
   .sgc-nav-inner{gap:10px;flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;}
@@ -163,8 +181,8 @@ html{overflow-x:hidden;}*{box-sizing:border-box;}body{font-family:var(--font-bod
       <div class="mcard-body">
         <span class="rebate-pill">✓ CVES Band A</span>
         <div class="price-row"><span class="price-before">$56,500</span><span class="price-after">$40,500</span></div>
-        <div class="price-note">November Promotion · after $15,000 CVES rebate · 22kW AC charger or half vehicle wrap available at $1,000</div>
-        <div class="topup-note">+ 22kW AC charger (excl. installation) or half vehicle wrap at $1,000 (optional)</div>
+        <div class="price-note">November Promotion · after $15,000 CVES rebate</div>
+        <div class="topup-note">Add a 22kW AC charger (excl. installation) or a 2-tone exterior for +$1,000 (choose one): $41,500</div>
         <ul class="spec-list">
           <li><span class="k">Chassis warranty</span><span class="v">3 yrs / 100,000 km</span></li>
           <li><span class="k">Drive motor warranty</span><span class="v">5 yrs / 200,000 km</span></li>
@@ -179,8 +197,8 @@ html{overflow-x:hidden;}*{box-sizing:border-box;}body{font-family:var(--font-bod
       <div class="mcard-body">
         <span class="rebate-pill">✓ CVES Band A</span>
         <div class="price-row"><span class="price-before">$57,500</span><span class="price-after">$41,500</span></div>
-        <div class="price-note">November Promotion · after $15,000 CVES rebate · 22kW AC charger or half vehicle wrap available at $1,000</div>
-        <div class="topup-note">+ 22kW AC charger (excl. installation) or half vehicle wrap at $1,000 (optional)</div>
+        <div class="price-note">November Promotion · after $15,000 CVES rebate</div>
+        <div class="topup-note">Add a 22kW AC charger (excl. installation) or a 2-tone exterior for +$1,000 (choose one): $42,500</div>
         <ul class="spec-list">
           <li><span class="k">Chassis warranty</span><span class="v">3 yrs / 100,000 km</span></li>
           <li><span class="k">Drive motor warranty</span><span class="v">5 yrs / 200,000 km</span></li>
@@ -191,9 +209,42 @@ html{overflow-x:hidden;}*{box-sizing:border-box;}body{font-family:var(--font-bod
     </div>
   </div>
 
+  <!-- SPEC BOX START -->
+  <div class="spec-box">
+    <div class="spec-box-head">eView Connect at a glance</div>
+    <table class="spec-table">
+      <tr><th>Specification</th><th>L1</th><th>L2</th></tr>
+      <tr><td>Seating</td><td>Driver + 2 passengers</td><td>Driver + 2 passengers</td></tr>
+      <tr><td>Overall length</td><td>4,895 mm</td><td>5,195 mm</td></tr>
+      <tr><td>Load space</td><td>7.2 m&sup3;</td><td>8.0 m&sup3;</td></tr>
+      <tr><td>Unladen weight</td><td>1,720 kg</td><td>1,860 kg</td></tr>
+      <tr><td>Payload (approx.)</td><td>1,180 kg</td><td>1,375 kg</td></tr>
+      <tr><td>Range (WLTP)</td><td>253 km</td><td>308 km</td></tr>
+      <tr><td>DC fast charge, 20&ndash;100%</td><td>about 41 min</td><td>about 52 min</td></tr>
+      <tr><td>Turning radius</td><td>6.35 m</td><td>6.85 m</td></tr>
+    </table>
+    <div class="safety">
+      <h3>Safety features</h3>
+      <ul>
+        <li>360 camera</li>
+        <li>Automatic emergency braking (AEB)</li>
+        <li>Blind spot detection</li>
+        <li>Lane change assist</li>
+        <li>Front / rear collision warning</li>
+        <li>Tyre pressure monitoring (TPMS)</li>
+        <li>Driver monitoring</li>
+        <li>Rear cross-traffic alert</li>
+        <li>Lane departure warning</li>
+        <li>Reverse radar</li>
+      </ul>
+    </div>
+    <div class="spec-foot">Specifications subject to change without prior notice. Payload is approximate. Prices shown are without add-ons. Add a 22kW AC charger (excl. installation) or a 2-tone exterior for $1,000 (choose one).</div>
+  </div>
+  <!-- SPEC BOX END -->
+
   <div class="promo-includes">
     <h3>Standard with every eView Connect</h3>
-    1 year road tax · Logo writing up to $330 · Front recording &amp; rear reverse camera · 3 free servicing + 4 additional
+    1 year road tax · Logo writing up to $330 · Front recording &amp; rear reverse camera · 3 free servicing · +4 additional servicing during the November Promotion
   </div>
 
   <p class="disclaimer">Prices include GST, exclude COE.</p>
