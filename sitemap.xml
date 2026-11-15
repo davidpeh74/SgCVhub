@@ -12,6 +12,10 @@
   <url><loc>https://sgcvhub.com/leasing</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://sgcvhub.com/contact</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://sgcvhub.com/blog</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://sgcvhub.com/coe-results</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://sgcvhub.com/blog/speed-limiter-deadline</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://sgcvhub.com/blog/caged-lorry-ban</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://sgcvhub.com/blog/hvzes-2026-revision</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://sgcvhub.com/blog/coe-guide</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://sgcvhub.com/privacy</loc><changefreq>yearly</changefreq><priority>0.2</priority></url>
   <url><loc>https://sgcvhub.com/terms</loc><changefreq>yearly</changefreq><priority>0.2</priority></url>
