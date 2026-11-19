@@ -147,7 +147,7 @@ html{overflow-x:hidden;}body{font-family:var(--font-body);background:var(--bg);c
 <!-- ======================================================================
   UPDATE AFTER EACH BIDDING ROUND (usually twice a month, results on Wednesday):
   1. Change the "Last updated" line in the hero.
-  2. Move the old "latest" row values into the "previous round" table.
+  2. Add the old "latest" values as a new top row in the "Past rounds" table (keep all old rows).
   3. Type the new numbers into the "latest" table.
   4. Update the "Next results" line.
 ====================================================================== -->
@@ -193,15 +193,14 @@ html{overflow-x:hidden;}body{font-family:var(--font-body);background:var(--bg);c
       </table>
     </div>
 
-    <h2>Previous round: 1st bidding, November 2026 (4 Nov)</h2>
+    <h2>Past rounds</h2>
     <div class="tbl-wrap">
       <table class="tbl">
-        <thead><tr><th>Category</th><th class="num">Premium</th></tr></thead>
+        <thead><tr><th>Round</th><th class="num">Cat C</th><th class="num">Cat A</th><th class="num">Cat B</th><th class="num">Cat E</th></tr></thead>
         <tbody>
-          <tr class="past"><td>Cat C</td><td class="num">$92,000</td></tr>
-          <tr class="past"><td>Cat A</td><td class="num">$139,001</td></tr>
-          <tr class="past"><td>Cat B</td><td class="num">$132,334</td></tr>
-          <tr class="past"><td>Cat E</td><td class="num">$135,998</td></tr>
+          <!-- NEW ROWS GO AT THE TOP: paste the old "latest" values here each round -->
+          <tr class="past"><td>4 Nov</td><td class="num">$92,000</td><td class="num">$139,001</td><td class="num">$132,334</td><td class="num">$135,998</td></tr>
+          <tr class="past"><td>21 Oct</td><td class="num">$92,200</td><td class="num">$132,004</td><td class="num">$131,901</td><td class="num">$135,790</td></tr>
         </tbody>
       </table>
     </div>
